@@ -71,6 +71,10 @@ analyses: [
         json: recipes/classify/classify-qiime.hjson
         template: recipes/classify/classify-qiime.sh
     }
+    {
+        json: recipes/usfish/check-pcr-barcodes.hjson
+        template: recipes/usfish/check-pcr-barcodes.sh
+    }
 
 ]
 
@@ -185,6 +189,22 @@ data: [
         summary:Reference sequence as fasta file.
 
     }
+
+    {
+        name: Samplesheet for PCR barcoded Testdata
+        value: export/local/usfish/pcr-barcoded-samplesheet.csv
+        type: CSV
+        summary: This file contains information on the metabarcode data.
+
+    }
+    {
+        name: Fish PCR Barcoded Testdata
+        value: export/local/usfish/pcr-barcoded-data
+        type: FASTQ
+        summary: This collections contains fish pcr-barcoded data.
+
+    }
+
 
 ]
 
