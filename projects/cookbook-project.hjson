@@ -14,18 +14,15 @@ settings: {
     '''
 
     text: '''
-
-        # Purpose
-
         This project contains commonly used data analysis recipes.
 
         Each analysis recipe has results associated with it.
 
-        # Analyses
+        ### Analyses
 
         You may copy any of these recipe into your own projects.
 
-        # Data
+        ### Data
 
         Each analysis also comes with test data that is also deposited into this project.
 
@@ -74,6 +71,10 @@ analyses: [
         json: recipes/classify/classify-qiime.hjson
         template: recipes/classify/classify-qiime.sh
     }
+    {
+        json: recipes/usfish/check-pcr-barcodes.hjson
+        template: recipes/usfish/check-pcr-barcodes.sh
+    }
 
 ]
 
@@ -102,7 +103,7 @@ data: [
 
     {
         name: Fish Metabarcode Testdata
-        value: export/local/usfish/
+        value: export/local/usfish/data
         type: FASTQ
         summary: This collections contains fish metabarcode data.
 
@@ -170,29 +171,37 @@ data: [
         name: Qiime2 testdata
         value: export/local/qiime2/data
         type: FASTQ, COLLECTION
-        summary: Test dataset for qiime2 tazonomic classification.
+        summary: Test dataset for qiime2 taxonomic classification.
 
     }
     {
         name: Test metadata sheet for Qiime2
-        value: export/local/qiime2/12s_metadata_file_validated.tsv
-        type: TSV
+        value: export/local/qiime2/12s_metadata_file_validated.csv
+        type: CSV
         summary:Sample metadata for qiime2 classification testdata
 
     }
 
     {
-        name: Reference file for qiime2 classification
-        value: export/local/qiime2/12s-ref-06112018.qza
-        type: QZA
-        summary:Reference sequence as Qiime2 artifact file.
+        name: Reference file for Qiime2 testdata
+        value: export/local/qiime2/12s-ref-qiime2.fasta
+        type: FASTA
+        summary:Reference sequence as fasta file.
+
+    }
+
+    {
+        name: Samplesheet for PCR barcoded Testdata
+        value: export/local/usfish/pcr-barcoded-samplesheet.csv
+        type: CSV
+        summary: This file contains information on the metabarcode data.
 
     }
     {
-        name: Taxonomy file for qiime2 classification
-        value: export/local/qiime2/12s-ref-taxonomy-05252018.qza
-        type: QZA
-        summary:Taxonomy file as Qiime2 artifact file.
+        name: Fish PCR Barcoded Testdata
+        value: export/local/usfish/pcr-barcoded-data
+        type: FASTQ
+        summary: This collections contains fish pcr-barcoded data.
 
     }
 

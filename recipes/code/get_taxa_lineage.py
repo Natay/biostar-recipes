@@ -4,14 +4,9 @@ This program is used to get taxonomy lineage for an accession from 'taxon_db' da
 
 """
 
-
 import sys, os
 import sqlite3
 from argparse import ArgumentParser
-
-# Database.
-TAXDIR = "/Users/asebastian/work/web-dev/biostar-recipes/export/refs/taxonomy"
-dbname = os.path.join(TAXDIR, "taxon_db")
 
 
 def strip(s):
@@ -32,9 +27,11 @@ def get_cursor(dbname):
 def get_taxa(fname):
     fname = args.accessions
     outfile = args.outfile
+    dbpath = args.dbpath
+
     outfile = open(outfile, "w")
 
-    curs = get_cursor(dbname)
+    curs = get_cursor(dbpath)
 
     data = dict()
     stream = open(fname, "r")
@@ -69,6 +66,8 @@ if __name__ == "__main__":
 
     parser = ArgumentParser()
 
+    parser.add_argument('--dbpath', dest='dbpath',
+                        help="Specify the full path of the lineage database destination.")
     parser.add_argument('--accessions', dest='accessions',
                         help="Text file with accessions")
     parser.add_argument('--outfile', dest='outfile',

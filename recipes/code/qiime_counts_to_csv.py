@@ -35,29 +35,27 @@ def run(args):
 
     samples = list(df.columns)[1:]
 
-    percents, counts = dict(), dict()
-    percents['taxa'] = taxa
+    #percents, counts = dict(), dict()
+    perc_df = pd.DataFrame()
+    counts_df = pd.DataFrame()
+    perc_df['taxa'] = taxa
 
     rnum, cnum = df.shape
-    percents['taxid'] = [''] * rnum
-    percents['rank'] = [''] * rnum
+    perc_df['taxid'] = [''] * rnum
+    perc_df['rank'] = [''] * rnum
 
-    counts['taxa'] = taxa
-    counts['taxid'] = [''] * rnum
-    counts['rank'] = [''] * rnum
+    counts_df['taxa'] = taxa
+    counts_df['taxid'] = [''] * rnum
+    counts_df['rank'] = [''] * rnum
 
     # calculate percent reads in each sample.
     for sample in samples:
         perc = round((df[sample] / sum(df[sample])) * 100, 3)
-        percents[sample] = list(perc)
-        counts[sample] = list(df[sample])
+        perc_df[sample] = list(perc)
+        counts_df[sample] = list(df[sample])
 
-    perc_df = pd.DataFrame(percents)
-    counts_df = pd.DataFrame(counts)
-
-    #fname = "/export/refs/alias/fishalias.txt"
-    #df = utils.alias(df=perc_df, fname=fname, key1='name', key2='sciname', name='name')
-
+    #aliasfile = "/Users/asebastian/work/web-dev/biostar-recipes/export/refs/taxonomy/fishalias.txt"
+    #perc_df = utils.alias(df=perc_df, fname=aliasfile, key1='name', key2='sciname', name='name')
 
     prefix = os.path.splitext(os.path.basename(fname))[0]
     prefix = "_".join(prefix.split("_")[:-1])

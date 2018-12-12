@@ -11,17 +11,15 @@ settings: {
     '''
 
     text: '''
-    # Purpose
-
     This project contains recipes described in the Biostar Handbook.
 
     Each analysis recipe has results associated with it.
 
-    # Analyses
+    ### Analyses
 
     You may copy any of these recipe into your own projects.
 
-    # Data
+    ### Data
 
     Each analysis also comes with test data that is also deposited into this project.
 

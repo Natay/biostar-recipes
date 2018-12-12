@@ -14,12 +14,12 @@
     label: Sample metadata
     help: The sample metadata
     source: PROJECT
-    type: TSV
+    type: CSV
     display: DROPDOWN
   }
 
   reference: {
-    value: Reference file for qiime2 classification
+    value: Reference file for Qiime2 testdata
     label: Reference Sequences to classify against
     help: The sequences to classify against
     source: PROJECT
@@ -100,19 +100,21 @@
 
       ## Output
 
-      The main result of the recipe is a bar plot showing the taxonomic classification.
+      The following are the output visualization files.
 
-      All the result files are in qiime2 artifact/visualization formats. Use [Qiime2 viewer](https://view.qiime2.org/) to view `*.qza` or `*.qzv` files.
+      1. A heatmap of the percentages at different taxonomic levels.
+      2. A taxonomic classification barplot that can be visualized using qiime2 viewer.
+
+      In addition, the recipe also produces count tables and percent tables at different taxonomic levels.
 
 
       ## Input
 
       The required input files are
 
-      1. Input data directory with sequenced reads (File name must look like L2S357_15_L001_R1_001.fastq.gz).
-      2. Sample metadata file in `tsv` format.
-      3. Reference sequences with accessions as a qiime2 artifacts file(.qza).
-      4. Taxonomy file with with accession and taxonomy path as qiime2 artifact file(.qza).
+      1. Input data directory with sequenced reads or a zipped file of all sequence fastq files. (File name must look like L2S357_15_L001_R1_001.fastq.gz).
+      2. Sample sheet in csv format. First column should contain sample ids. Rest of the columns don't matter.
+      3. Reference sequences with accessions as fasta file.
 
       '''
   }

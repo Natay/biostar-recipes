@@ -13,4 +13,3 @@ subread
 kallisto
 trimmomatic
 salmon
-taxonkit
