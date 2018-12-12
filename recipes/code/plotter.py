@@ -80,7 +80,7 @@ def heatmap(data, colidx=3, labidx=0, fname='heatmap.png'):
     labels = list(df.columns)
 
     # Simplify label names.
-    labels = [label.split("_")[0] for label in labels]
+    #labels = [label.split("_")[0] for label in labels]
     ax.set_xticklabels(labels, minor=False)
     ax.set_yticklabels(df.index, minor=False)
 
@@ -98,7 +98,7 @@ def heatmap(data, colidx=3, labidx=0, fname='heatmap.png'):
 
     plt.xticks(rotation=90)
 
-    plt.savefig(f'{fname}')
+    plt.savefig(f'{fname}.pdf')
 
     if SHOW_PLOT:
         # Pop a window in non-offline mode.
