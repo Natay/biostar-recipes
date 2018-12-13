@@ -97,6 +97,10 @@ python -m recipes.code.combine_centrifuge_reports --cutoff $CUTOFF $COUNTSDIR/*.
 # Draw the heat maps for each csv report
 python -m recipes.code.plotter $CLASSDIR/*.csv --type heat_map
 
+# Generate a combined reformatted report of kraken reports tabulating the third column
+python -m recipes.code.combine_centrifuge_reports --cutoff $CUTOFF $COUNTSDIR/*.txt --idx 2 --outdir $CLASSDIR --is_kreport
+
+
 # Draw the rarefaction curves.
 python -m recipes.code.rarefaction $COUNTSDIR/*.rep --outdir $RAREFACTION
 
@@ -108,9 +112,3 @@ zip -q -r $UNCLASS.zip $UNCLASS
 
 # Cleanup unzipped reads
 rm -rf $UNCLASS/*
-
-# Tabulate result data by the column "numUniqueReads", cutoff not applied here
-python -m recipes.code.combine_centrifuge_reports $COUNTSDIR/*.tsv --column "numUniqueReads" > $CLASSDIR/species_uniquereads_classification.csv
-
-# Tabulate result data by the column "numReads", cutoff not applied here
-python -m recipes.code.combine_centrifuge_reports $COUNTSDIR/*.tsv --column "numReads" > $CLASSDIR/species_numreads_classification.csv
