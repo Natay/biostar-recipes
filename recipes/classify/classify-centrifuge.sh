@@ -1,4 +1,4 @@
-set -ue
+set -uex
 
 # The input directory for the data
 DDIR=$(dirname {{reads.value}})
