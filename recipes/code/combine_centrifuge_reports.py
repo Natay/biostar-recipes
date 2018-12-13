@@ -33,23 +33,25 @@ def colnames(fnames):
     return names
 
 
-def print_kreport(df, outdir=None, rank=''):
+def print_kreport(df, outdir=None, rank='', colidx=0):
 
     rankmap = dict(S="Species", G="Genus", F='Family', C='Class', D='Domain')
     ranks = rank or 'SGFCD'
+    colmap = {0: "percent", 1: "numreads", 2: "numreads"}
+
     pd.set_option('display.expand_frame_repr', False)
 
     for rank in ranks:
         subset = utils.get_subset(df, rank)
         label = rankmap.get(rank, 'Unknown')
 
-        path = os.path.join(str(outdir), f'{label.lower()}_percent_classification.csv')
+        path = os.path.join(str(outdir), f'{label.lower()}_{colmap.get(colidx, "")}_classification.csv')
         path = sys.stdout if not outdir else path
 
         subset.to_csv(index=False, path_or_buf=path)
 
 
-def generate_ktable(files):
+def generate_ktable(files, colidx=0):
     "Generate table compatible with k-report"
 
     storage, allkeys = [], {}
@@ -71,7 +73,7 @@ def generate_ktable(files):
         collect = list(reversed(fields[3:]))
 
         for data in storage:
-            value = data.get(key, [0])[0]
+            value = data.get(key, [0] * (colidx+1))[colidx]
             value = float(value)
             collect.append(value)
         table.append(collect)
@@ -103,7 +105,6 @@ def generate_table(files, keyidx, has_header=True):
     return table
 
 
-
 def tabulate(files, keyidx=4, cutoff=0, has_header=True, is_kreport=False):
     """
     Summarize result found in data_dir by grouping them.
@@ -111,7 +112,7 @@ def tabulate(files, keyidx=4, cutoff=0, has_header=True, is_kreport=False):
 
     # The final table that can be printed and further analyzed
     if is_kreport:
-        table = generate_ktable(files=files)
+        table = generate_ktable(files=files, colidx=keyidx)
     else:
         table = generate_table(files=files, keyidx=keyidx ,has_header=has_header)
 
@@ -145,6 +146,10 @@ def main():
     parser.add_argument('--column', dest='column', type=str,
                         help="Name of column to combine across all files")
 
+    parser.add_argument('--idx', dest='idx', type=int,
+                        help="idx of column to combine across all files for kreports.",
+                        default=0)
+
     parser.add_argument('--cutoff', dest='cutoff', default=0.0,
                         help="The sum of rows have to be larger than the cutoff to be registered default=%(default)s.",
                         type=float)
@@ -166,10 +171,10 @@ def main():
 
     if args.is_kreport:
         # Special case to handle kraken reports
-        df = tabulate(files=args.files, cutoff=args.cutoff, is_kreport=True)
-        print_kreport(df, outdir=args.outdir)
+        df = tabulate(files=args.files, keyidx=args.idx, cutoff=args.cutoff, is_kreport=True)
+        print_kreport(df, outdir=args.outdir, colidx=args.idx)
     else:
-        assert args.column, "--column argument required."
+        assert args.column, "--column or --idx argument required."
         # Map the column name to an index
         colidx = map_name(name=args.column, files=args.files)
         df = tabulate(files=args.files, cutoff=args.cutoff, keyidx=colidx)
