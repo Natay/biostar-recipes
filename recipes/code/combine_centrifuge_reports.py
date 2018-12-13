@@ -37,7 +37,7 @@ def print_kreport(df, outdir=None, rank='', colidx=0):
 
     rankmap = dict(S="Species", G="Genus", F='Family', C='Class', D='Domain')
     ranks = rank or 'SGFCD'
-    colmap = {0: "percent", 1: "numreads", 2: "numreads"}
+    colmap = {0: "percent", 1: "numreads", 2: "uniquereads"}
 
     pd.set_option('display.expand_frame_repr', False)
 
@@ -117,7 +117,7 @@ def tabulate(files, keyidx=4, cutoff=0, has_header=True, is_kreport=False):
         table = generate_table(files=files, keyidx=keyidx ,has_header=has_header)
 
     # Filter table by cutoffs
-    cond1 = lambda row: sum(row[3:]) > cutoff
+    cond1 = lambda row: sum(row[3:]) >= cutoff
     table = list(filter(cond1, table))
 
     # Sort by reverse of the abundance.
