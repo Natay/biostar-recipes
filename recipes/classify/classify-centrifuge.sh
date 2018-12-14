@@ -1,4 +1,4 @@
-set -ue
+set -uex
 
 # The input directory for the data
 DDIR=$(dirname {{reads.value}})
@@ -97,12 +97,18 @@ python -m recipes.code.combine_centrifuge_reports --cutoff $CUTOFF $COUNTSDIR/*.
 # Draw the heat maps for each csv report
 python -m recipes.code.plotter $CLASSDIR/*.csv --type heat_map
 
+# Generate a combined reformatted report of kraken reports tabulating the third column
+python -m recipes.code.combine_centrifuge_reports $COUNTSDIR/*.txt --idx 2 --outdir $CLASSDIR --is_kreport --summary
+
+
 # Draw the rarefaction curves.
 python -m recipes.code.rarefaction $COUNTSDIR/*.rep --outdir $RAREFACTION
 
 # Extract unclassified reads into separate folder.
 python -m recipes.code.extract_unclassified $DDIR/*.fastq.gz --report_files $COUNTSDIR/*.rep --outdir $UNCLASS
 
+# Zip the unclassified reads
+zip -q -r $UNCLASS.zip $UNCLASS
 
-# Tabulate result data by the column "numUniqueReads", cutoff not applied here
-python -m recipes.code.combine_centrifuge_reports $COUNTSDIR/*.tsv --column "numUniqueReads" > $CLASSDIR/species_uniquereads_classification.csv
+# Cleanup unzipped reads
+rm -rf $UNCLASS/*
