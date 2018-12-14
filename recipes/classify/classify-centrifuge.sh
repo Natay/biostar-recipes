@@ -98,7 +98,7 @@ python -m recipes.code.combine_centrifuge_reports --cutoff $CUTOFF $COUNTSDIR/*.
 python -m recipes.code.plotter $CLASSDIR/*.csv --type heat_map
 
 # Generate a combined reformatted report of kraken reports tabulating the third column
-python -m recipes.code.combine_centrifuge_reports $COUNTSDIR/*.txt --idx 2 --outdir $CLASSDIR --is_kreport
+python -m recipes.code.combine_centrifuge_reports $COUNTSDIR/*.txt --idx 2 --outdir $CLASSDIR --is_kreport --summary
 
 
 # Draw the rarefaction curves.
