@@ -111,7 +111,7 @@ def generate_table(files, keyidx, has_header=True):
     return table
 
 
-def tabulate(files, keyidx=4, cutoff=0, has_header=True, is_kreport=False, summary=False):
+def tabulate(files, keyidx=4, cutoff=0, has_header=True, is_kreport=False):
     """
     Summarize result found in data_dir by grouping them.
     """
@@ -123,7 +123,7 @@ def tabulate(files, keyidx=4, cutoff=0, has_header=True, is_kreport=False, summa
         table = generate_table(files=files, keyidx=keyidx ,has_header=has_header)
 
     # Filter table by cutoffs
-    cond1 = lambda row: sum(row[3:]) >= cutoff
+    cond1 = lambda row: sum(row[3:]) > cutoff
     table = list(filter(cond1, table))
 
     # Sort by reverse of the abundance.
