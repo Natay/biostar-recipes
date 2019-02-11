@@ -21,10 +21,9 @@
   {
     name: Griffith RNA-Seq Demo
     image: rnaseq-demo.jpg
-    summary: A recipe for the the Griffith Data Analysis example in the handbook.
     help:
       '''
-
+      A recipe for the the Griffith Data Analysis example in the handbook.
       # Help
 
       This recipe implements the pipeline discussed at:

@@ -5,7 +5,7 @@
     name: Metagenomics with the Mothur Package
     image: mothur.png
     privacy: Public
-    help: ""
+    help: "Preform metagenomics using Mothur package."
   }
   data: [
 
@@ -13,8 +13,8 @@
         name: Metagenomics Data Directory
         value: /export/data/mothur-study1
         type: MOTHUR
-        summary: A prepackaged data set with test files.
-        text: '''
+        help: '''
+        A prepackaged data set with test files.
         Contains reads in a directory and a file list.
         '''
     }

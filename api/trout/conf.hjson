@@ -7,6 +7,7 @@
     privacy: Private
     help:
       '''
+      NEFC and Ashland FWCO study of eDNA and electrofishing techniques.
       # More information
 
       NEFC and Ashland FWCO study of eDNA and electrofishing techniques.
@@ -18,46 +19,44 @@
         name: Fish Sequences by Accession Number
         value: export/local/usfish/fishacc.fa
         type: FASTA
-        summary: Fish genomic sequences identified by accession numbers.
+        help: Fish genomic sequences identified by accession numbers.
     }
 
     {
         name: Fish Sequences by Common Name
         value: export/local/usfish/fishname.fa
         type: FASTA
-        summary: Fish genomic sequences identified by common name.
+        help: Fish genomic sequences identified by common name.
     }
 
     {
-            name: Fish Metabarcode Testdata
-            value: export/local/usfish/
-            type: FASTQ, COLLECTION
-            summary: This collections contains fish metabarcode test data.
+        name: Fish Metabarcode Testdata
+        value: export/local/usfish/
+        type: FASTQ, COLLECTION
+        help: This collections contains fish metabarcode test data.
 
     }
-
-
 
     {
         name: Samplesheet for Fish Metabarcode Testdata
         value: export/local/usfish/sample-sheet.csv
         type: CSV
-        summary: This file contains information on the metabarcode data.
+        help: This file contains information on the metabarcode data.
     }
 
     {
         name: Sequencing Run 1
         value: /export/data/usfish/runs/run1
         type: FASTQ, COLLECTION
-        summary: Data for sequencing run 1
+        help: Data for sequencing run 1
     }
 
     {
         name: Sample sheet for Sequencing Run 1
         value: /export/data/usfish/runs/run1-sample-sheet.csv
         type: CSV
-        summary: Specfications for the data in Sequencing Run 1
         help: '''
+        Specfications for the data in Sequencing Run 1
         This file is in a format agreed to when developing the recipe. It contains a number of columns
         that describe the samples names, barcodes, primers and file names.
         '''
@@ -68,15 +67,15 @@
         name: Sequencing Run 2
         value: /export/data/usfish/runs/run2
         type: FASTQ, COLLECTION
-        summary: Data for sequencing run 2
+        help: Data for sequencing run 2
     }
 
     {
         name: Sample sheet for Sequencing Run 2
         value: /export/data/usfish/runs/run2-sample-sheet.csv
         type: CSV
-        summary: Sample description for Sequencing Run 2
         help: '''
+        Sample description for Sequencing Run 2
         This file is in a format agreed to when developing the recipe. It contains a number of columns
         that describe the samples names, barcodes, primers and file names.
         '''

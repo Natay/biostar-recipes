@@ -72,10 +72,9 @@
   {
     name: Classify sequences using k-mer motifs
     image: classify-centrifuge.jpg
-    summary: Classify paired end reads with a k-mer based approach using the Centrifuge software.
     help:
       '''
-
+      Classify paired end reads with a k-mer based approach using the Centrifuge software.
       # Help
 
       Centrifuge is a microbial classification software that enables rapid, accurate,

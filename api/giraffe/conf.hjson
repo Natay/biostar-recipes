@@ -13,8 +13,8 @@
         name: Results: Genome Annotations.gtf
         value: /export/data/giraffe/results/annotations.gtf
         type: GTF, ANNOTATIONS
-        summary: Annotations produced with Augustus and using RNA-Seq data.
         help: '''
+        Annotations produced with Augustus and using RNA-Seq data.
         Contains annotations produced with Augustus using hints generated from the RNA-Seq data.
         '''
     }
@@ -23,8 +23,8 @@
         name: Results: Protein Sequences.fa
         value: /export/data/giraffe/results/proteins.fa
         type: FASTA, PROTEIN
-        summary: Predicted protein sequences.
         help: '''
+        Predicted protein sequences.
         Contains the predicted protein sequences based on the annotations generated with Augustus.
         '''
     }
@@ -33,8 +33,8 @@
         name: Results: Functional Annotations.txt
         value: /export/data/giraffe/results/functional-annotations.txt
         type: TXT
-        summary: Functional annotations for each gene annotation.
         help: '''
+        Functional annotations for each gene annotation.
         Contains the predicted transcript sequences annotated by their closest
         match to a known sequence.
         '''
@@ -44,8 +44,8 @@
         name: Assembly: Short Section.fa
         value: /export/data/giraffe/assembly/subset.fa
         type: FASTA
-        summary: Contains the four largest contigs of the published assembly. Use it to test the pipeline.
         help: '''
+        Contains the four largest contigs of the published assembly. Use it to test the pipeline.
         Contains the scaffolds scaffold320, scaffold268, scaffold1292,scaffold370 from the
         giraffe scaffold assembled by Rayan Chiki.
         '''
@@ -56,16 +56,18 @@
         name: Assembly: Published Giraffe Scaffold 2016.fa
         value: /export/data/giraffe/assembly/soap_assembly_k91_params.gapfilled.fa
         type: FASTA
-        summary: The published assembled Giraffe scaffold (2016)
-        help: The giraffe scaffold assembled by Rayan Chiki
+        help: '''
+        The published assembled Giraffe scaffold (2016)
+        The giraffe scaffold assembled by Rayan Chiki
+        '''
     }
 
     {
         name: Sequencing Run: MA1_MP
         value: /export/data/giraffe/data/GIRAFFE/MA1_MP
         type: FASTQ
-        summary: Giraffe, MA1, Mate Pairs, 150bp, 2 x 78 million reads, 8x coverage
         help: '''
+        Giraffe, MA1, Mate Pairs, 150bp, 2 x 78 million reads, 8x coverage
         Specimen ID: `MA1`
 
         Species: Masai Giraffe
@@ -94,8 +96,8 @@
         name: Sequencing Run: MA1_PE
         value: /export/data/giraffe/data/GIRAFFE/MA1_PE
         type: FASTQ
-        summary: Giraffe, MA1,  Paired End, 150bp, 2 x 285 million reads, 28x coverage
         help: '''
+        Giraffe, MA1,  Paired End, 150bp, 2 x 285 million reads, 28x coverage
         Specimen ID: `MA1`
 
         Species: Masai Giraffe
@@ -124,8 +126,8 @@
         name: Sequencing Run: NZOO_PE
         value: /export/data/giraffe/data/GIRAFFE/NZOO
         type: FASTQ
-        summary: Giraffe, NZOO, Paired End, 151bp, 4 x 22 million reads, 30x coverage
         help: '''
+        Giraffe, NZOO, Paired End, 151bp, 4 x 22 million reads, 30x coverage
         Specimen ID: `NZOO`
 
         Species: Masai Giraffe
@@ -150,8 +152,8 @@
         name: Sequencing Run: UGA_PE
         value: /export/data/giraffe/data/GIRAFFE/UGA
         type: FASTQ
-        summary: Giraffe, NZOO, Paired End, 250bp, 2 x 333 million reads, 55x coverage
         help: '''
+        Giraffe, NZOO, Paired End, 250bp, 2 x 333 million reads, 55x coverage
         Specimen ID: `UGA`
 
         Species: Rothschild Giraffe
@@ -176,8 +178,8 @@
         name: Sequencing Run: WOAK_PE
         value: /export/data/giraffe/data/OKAPI/WOAK_PE
         type: FASTQ
-        summary:  Okapi, WOAK_PE, Paired End, 150bp, 4 x 135 million reads, 27x coverage
         help: '''
+        Okapi, WOAK_PE, Paired End, 150bp, 4 x 135 million reads, 27x coverage
         Specimen ID: `WOAK`
 
         Species: Okapi
@@ -202,8 +204,8 @@
         name: Sequencing Run: WOAK_MP
         value: /export/data/giraffe/data/OKAPI/WOAK_MP
         type: FASTQ
-        summary: Okapi, WOAK_MP, DNA, Mate Pair,  150bp, 2 x 67 million reads, 7x coverage
         help: '''
+        Okapi, WOAK_MP, DNA, Mate Pair,  150bp, 2 x 67 million reads, 7x coverage
         Specimen ID: `WOAK`
 
         Species: Okapi
@@ -226,8 +228,8 @@
         name: Sequencing Run: NZOO_RNASEQ,
         value: /export/data/giraffe/data/GIRAFFE/RNASEQ
         type: FASTQ, RNASEQ
-        summary: Giraffe, NZOO, RNASEQ, 150bp,  4 x 50 million, for Liver, Heart, Lung and Fibroblast Cell Line
         help: '''
+        Giraffe, NZOO, RNASEQ, 150bp,  4 x 50 million, for Liver, Heart, Lung and Fibroblast Cell Line
         Specimen ID: `NZOO` and 'MASG'
         ```
         GiraffeCellLine_R1.fastq.gz  FASTQ   DNA   50,073,121  7,510,968,150      150      150      150
@@ -242,8 +244,8 @@
         name: Sequencing Run: WOAK_RNASEQ
         value: /export/data/giraffe/data/OKAPI/RNASEQ
         type: FASTQ, RNASEQ
-        summary: Okapi, WOAK, OKSD, RNASEQ, 150bp, 2 x 56 million, Liver and Fibroblast Cell Line
         help: '''
+        Okapi, WOAK, OKSD, RNASEQ, 150bp, 2 x 56 million, Liver and Fibroblast Cell Line
         Specimen ID: `WOAK` and `OKSD`
 
         ```

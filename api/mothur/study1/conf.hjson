@@ -19,9 +19,9 @@
       filename: commands.txt
       command: mothur commands.txt
     }
-    summary: A metagenomics pipeline for 16S sequence analysis using the `mothur` software.
     help:
       '''
+      A metagenomics pipeline for 16S sequence analysis using the `mothur` software.
 
       # Help
 

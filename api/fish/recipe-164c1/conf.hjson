@@ -58,9 +58,9 @@
   {
     name: Classify sequences using alignments
     image: classify-alignments.png
-    summary: Classifies overlapping reads with bwa.
     help:
       '''
+      Classifies overlapping reads with bwa.
 
       # Help
 

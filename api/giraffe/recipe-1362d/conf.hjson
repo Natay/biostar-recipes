@@ -37,10 +37,9 @@
   {
     name: Visualize FASTQ data quality
     image: fastqc.png
-    summary: Generates a FastQC report from a data collection.
     help:
       '''
-
+      Generates a FastQC report from a data collection.
       # Help
 
       Generates a FastQC report on a single file or a data collection.

@@ -87,10 +87,9 @@
   {
     name: Short Read Alignment
     image: short-read-alignment.png
-    summary: Align short reads with different methodologies: bwa, bowtie2, hisat2
     help:
       '''
-
+      Align short reads with different methodologies: bwa, bowtie2, hisat2
       # Help
 
       This recipe aligns sequencing reads to a reference genome.

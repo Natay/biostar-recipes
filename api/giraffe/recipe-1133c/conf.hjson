@@ -85,10 +85,9 @@
   {
     name: RNA-Seq Transcript Abundance Estimation
     image: pseudo-alignment.png
-    summary: Transcript abundance estimations using different algorithms: Kallisto, Salmon.
     help:
       '''
-
+      Transcript abundance estimations using different algorithms: Kallisto, Salmon.
       # Help
 
       This recipe estimates the transcript abundances of sequencing reads when compared to transcripts sequences.

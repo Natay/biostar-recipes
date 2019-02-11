@@ -28,28 +28,28 @@
             name: Transcripts from chr22 human genome.fa
             value: export/local/rnaseq/refs/22.fa
             type: FASTA, TRANSCRIPTS
-            summary: Transcript sequences for chr22 of the human genome.
+            help: Transcript sequences for chr22 of the human genome.
         }
 
         {
             name: Gene Annotations for chr22 human genome.gtf
             value: export/local/rnaseq/refs/22.gtf
             type: GTF
-            summary: Transcript and gene models for chr22 of the human genome.
+            help: Transcript and gene models for chr22 of the human genome.
         }
 
         {
             name: ERCC92 Spike Control Reference.fa
             value: export/local/rnaseq/refs/ERCC92.fa
             type : FASTA, TRANSCRIPTS
-            summary: Transcript sequences for the ERCC92 Spike Control.
+            help: Transcript sequences for the ERCC92 Spike Control.
         }
 
         {
             name: ERCC92 Spike Control Annotations.gtf
             value: export/local/rnaseq/refs/ERCC92.gtf
             type : GTF
-            summary: Transcript and gene models for the ERCC92 Spike Control .
+            help: Transcript and gene models for the ERCC92 Spike Control .
         }
 
     ]

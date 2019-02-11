@@ -22,23 +22,29 @@
         name: Genome.fa
         value: recipes/tutorial/data/genome.fa
         type: FASTA
-        summary: A test genome file.
-        text: A longer description for the test sequence file goes here.
+        help: '''
+        A test genome file.
+        A longer description for the test sequence file goes here.
+        '''
     }
 
     {
         name: SRR numbers.txt
         value: recipes/tutorial/data/sra.txt
         type: SRR
-        summary: SRR sequencing run accession numbers from SRA.
-        text: Each line represents a SRR run id.
+        help: '''
+        SRR sequencing run accession numbers from SRA.
+        Each line represents a SRR run id.
+        '''
     }
 
     {
         name: File Collection
         value: recipes/tutorial/collection
-        summary: Multiple files and folders may be represented as a single data entry.
-        text: This collection contains multiple files and folders. The data view lists the content of the directory.
+        help: '''
+        Multiple files and folders may be represented as a single data entry.
+        This collection contains multiple files and folders. The data view lists the content of the directory.
+        '''
     }
 
 ]
