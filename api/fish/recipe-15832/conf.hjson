@@ -1,0 +1,102 @@
+{
+  reads:
+  {
+    value: export/local/usfish/
+    name: Fish Metabarcode Testdata
+    label: Sequencing Reads
+    type: FASTQ, COLLECTION
+    display: DROPDOWN
+    source: PROJECT
+    help: This should be a collection of FASTQ files.
+  }
+  samplesheet:
+  {
+    value: /export/data/usfish/runs/run1-sample-sheet.csv
+    name: Samplesheet for Fish Metabarcode Testdata
+    label: Sample sheet
+    type: CSV
+    display: DROPDOWN
+    source: PROJECT
+    help: Sample sheet.
+  }
+  quality:
+  {
+    label: Quality threshold
+    display: INTEGER
+    value: 30
+    help: Regions with average quality score below this will be trimmed.
+    range:
+    [
+      0
+      40
+    ]
+  }
+  min_length:
+  {
+    label: Minimum Length
+    display: INTEGER
+    value: 150
+    help: Minimum read length after merging read pairs.
+    range:
+    [
+      0
+      1000
+    ]
+  }
+  max_length:
+  {
+    label: Maximum Length
+    display: INTEGER
+    value: 350
+    help: Maximum read length after merging read pairs.
+    range:
+    [
+      0
+      1000
+    ]
+  }
+  settings:
+  {
+    name: Trim and merge reads
+    image: trim-merge.png
+    help:
+      '''
+      Performs primer removal, quality trimming and merging of paired end reads.
+
+      # Help
+
+      This recipe performs data processing of a paired end read collection.
+      Data processing is carried out in the following order.
+
+      1. Trim reads by quality
+      2. Trim reads of forward and reverse primer sequences.
+      3. Merge trimmed read pairs.
+      4. Filter out reads with Ns.
+      5. Size select reads.
+
+      # Input
+
+      This recipe requires a paired end data collection and a sample sheet.
+      The format of the sample sheet is shown below.
+
+      ```
+      sample,sample_group,barcode,fwd_primer,rev_primer,target_gene,read1,read2
+      S1,MiniX,ATCACG,GCATTYCCNCGDATRAAYAAYATRAG,ACCTCAGGGTGTCCGAARAAYCARAA,COI,S1_R1_001.fastq.gz,S1_R2_001.fastq.gz
+      S2,MiniX,ATCACG,GCATTYCCNCGDATRAAYAAYATRAG,ACCTCAGGGTGTCCGAARAAYCARAA,COI,S2_R1_001.fastq.gz,S2_R2_001.fastq.gz
+      S3,Sarri,ATCACG,AYAAGACGAGAAGACCC,CCGGTCTGAACTCAGATCACGT,16S,S3_R1_001.fastq.gz,S3_R2_001.fastq.gz
+      S4,Sarri,ATCACG,AYAAGACGAGAAGACCC,CCGGTCTGAACTCAGATCACGT,16S,S4_R1_001.fastq.gz,S4_R2_001.fastq.gz
+
+      ```
+
+      # Output
+
+      Final results are in `selected` folder. The processed data at each step is organized as follows.
+
+      1. Trimmed paired end reads in trimmed directory.
+      2. Merged reads after trimming in merged directory.
+      3. Reads filtered for Ns in filtered directory.
+      4. Size selected reads in selected directory.
+
+      '''
+  }
+}

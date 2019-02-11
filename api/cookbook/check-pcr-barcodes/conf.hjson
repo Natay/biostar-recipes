@@ -1,0 +1,84 @@
+{
+  reads:
+  {
+    value: Fish PCR Barcoded Testdata
+    label: Sequencing Data Directory
+    help: Multiple paired-end sequencing reads.
+    source: PROJECT
+    type: FASTQ
+    display: DROPDOWN
+  }
+  sheet:
+  {
+    value: Samplesheet for PCR barcoded Testdata
+    label: Sample description
+    help: The sample sheet that describes the data
+    source: PROJECT
+    type: CSV
+    display: DROPDOWN
+  }
+  library:
+  {
+    value: SE
+    label: Library layout
+    help: Specify the library type.
+    display: DROPDOWN
+    choices:
+    [
+      [
+        SE
+        Single end
+      ]
+      [
+        PE
+        Paired end
+      ]
+    ]
+  }
+  error_rate:
+  {
+    value: 0
+    label: Acceptable error-rate in PCR barcode
+    help: Acceptable error-rate in PCR barcode.
+    display: FLOAT
+    range:
+    [
+      0
+      0.5
+    ]
+  }
+  settings:
+  {
+    name: Estimate true PCR barcode fraction in the data
+    image: check-pcr-barcodes.png
+    help:
+      '''
+    Estimate the fraction of reads that contain correct PCR barcodes and filter out reads with incorrect pcr barcodes.
+      # Help
+
+      This recipe will check for PCR barcode in the data and filter out reads that do not contain correct PCR-barcode using cutadapt.
+      Cutadapt is run with zero error tolerance by default. However, this can be adjusted by the user.
+
+      The recipe require a samplesheet in the format as shown below.
+
+
+        ```
+        sample,sample_group,fwd_barcode,fwd_primer,rev_barcode,rev_primer,target_gene,read1,read2,min_length,max_length
+        WFC_87,11002,TCGGCA,TTACACATGCAAGTMTCCGC,GTGGCC,CATAGTGGGGTATCTAATCCCAGTTTG,12S,11002_S89_L001_R1_001.fastq.gz,11002_S89_L001_R2_001.fastq.gz,,
+        WFC_15,11212,CGTACG,TTACACATGCAAGTMTCCGC,TAGCTT,CATAGTGGGGTATCTAATCCCAGTTTG,12S,11212_S15_L001_R1_001.fastq.gz,11212_S15_L001_R2_001.fastq.gz,,
+
+        ```
+
+      ## Input files
+
+      1. A directory that contains all the datafiles.
+      2. A sample sheet that connects the read pairs to file names and contain the pcr-barcode
+
+      ## Output files.
+      1. Folder containing reads with correct PCR-barcode
+      2. Folder containing reads with incorrect barcode.
+      3. Tables with the no.of reads with correct and incorrect pcr-barcode in each sample.
+
+      '''
+  }
+}

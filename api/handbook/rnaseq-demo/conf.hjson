@@ -1,0 +1,37 @@
+{
+  reference:
+  {
+    value: Transcripts from chr22 human genome.fa
+    label: Reference Genome
+    help: The reference to align against
+    type: TRANSCRIPTS
+    display: DROPDOWN
+    source: PROJECT
+  }
+  annotation:
+  {
+    value: Gene Annotations for chr22 human genome.gtf
+    label: Annotations
+    help: The annotations to quantify over
+    type: GTF
+    display: DROPDOWN
+    source: PROJECT
+  }
+  settings:
+  {
+    name: Griffith RNA-Seq Demo
+    image: rnaseq-demo.jpg
+    help:
+      '''
+      A recipe for the the Griffith Data Analysis example in the handbook.
+      # Help
+
+      This recipe implements the pipeline discussed at:
+
+      * <https://www.biostarhandbook.com/rnaseq/rnaseq-griffith-data.html>
+
+      It will automatically download the sequencing data from the remote site.
+
+      '''
+  }
+}

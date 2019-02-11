@@ -1,0 +1,54 @@
+{
+  readlen:
+  {
+    label: Read Length
+    display: INTEGER
+    value: 250
+    range:
+    [
+      70
+      100000
+    ]
+  }
+  instrument:
+  {
+    label: Select Instrument
+    display: DROPDOWN
+    choices:
+    [
+      [
+        hiseq
+        Illumina Hiseq
+      ]
+      [
+        pacbio
+        Pacific BioSciences Sequel
+      ]
+      [
+        minion
+        Oxford Nanopor Minion
+      ]
+    ]
+    value: pacbio
+  }
+  reference:
+  {
+    label: Reference Genome
+    display: DROPDOWN
+    type: FASTA
+    source: PROJECT
+    value: Genome.fa
+  }
+  settings:
+  {
+    name: Starter Recipe
+    image: starter.png
+    help:
+      '''
+      This recipe can be a starting point for other recipes.
+      # Help
+
+      Use this recipe to create new recipes.
+      '''
+  }
+}

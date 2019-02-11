@@ -1,0 +1,51 @@
+{
+  settings:
+  {
+    uid: tutorial
+    name: Recipe Tutorials
+    image: tutorial.png
+    privacy: Public
+    help:
+      '''
+    This project contains simple analyses that demonstrate the process
+    of creating a **recipe**.
+
+      Follow the **instructions,** investigate the **data** and **recipe code**
+      to gain a deeper understanding of how recipes work.
+
+      Read the step by step instructions in the [How to write recipes](https://github.com/biostars/biostar-recipes/blob/master/docs/how-to-write-recipes.md).
+      '''
+  }
+  data: [
+
+    {
+        name: Genome.fa
+        value: recipes/tutorial/data/genome.fa
+        type: FASTA
+        help: '''
+        A test genome file.
+        A longer description for the test sequence file goes here.
+        '''
+    }
+
+    {
+        name: SRR numbers.txt
+        value: recipes/tutorial/data/sra.txt
+        type: SRR
+        help: '''
+        SRR sequencing run accession numbers from SRA.
+        Each line represents a SRR run id.
+        '''
+    }
+
+    {
+        name: File Collection
+        value: recipes/tutorial/collection
+        help: '''
+        Multiple files and folders may be represented as a single data entry.
+        This collection contains multiple files and folders. The data view lists the content of the directory.
+        '''
+    }
+
+]
+}
