@@ -1,0 +1,156 @@
+{
+  settings:
+  {
+    uid: cookbook
+    name: Bioinformatics Cookbook
+    image: cookbook.png
+    privacy: Public
+    help:
+      '''
+      This project contains commonly used data analysis recipes.
+
+      Each analysis recipe has results associated with it.
+
+      ### Analyses
+
+      You may copy any of these recipe into your own projects.
+
+      ### Data
+
+      Each analysis also comes with test data that is also deposited into this project.
+
+      Investigate the data and the results to understand the recipe requirements.
+
+      '''
+  }
+
+  data: [
+
+    {
+        name: Ebola Genome.fa
+        value: export/local/bwa/AF086833.fa
+        type: FASTA
+        summary: Ebola sequencing project.
+    }
+
+    {
+        name: Single End Reads.fq
+        value: export/local/bwa/SRR1972739.fq
+        type: FASTQ
+        summary: Single end sequencing reads.
+    }
+
+    {
+        name: FASTQ Data Collection
+        value: export/local/fastqc/
+        type: FASTQ
+        summary: This collections contains two different paired-end sequencing runs.
+    }
+
+    {
+        name: Fish Metabarcode Testdata
+        value: export/local/usfish/data
+        type: FASTQ
+        summary: This collections contains fish metabarcode data.
+
+    }
+
+    {
+        name: Samplesheet for Fish Metabarcode Testdata
+        value: export/local/usfish/sample-sheet.csv
+        type: CSV
+        summary: This file contains information on the metabarcode data.
+
+    }
+
+    {
+        name: Fish Sequences by Common Name
+        value: export/local/usfish/fishname.fa
+        type: FASTA
+        summary: Fish genomic sequences identified by common names.
+    }
+
+    {
+        name: Fish Sequences by Accession Number
+        value: export/local/usfish/fishacc.fa
+        type: FASTA
+        summary: Fish genomic sequences identified by accession numbers.
+    }
+
+
+    {
+        name: ADH partial region.fa
+        value: export/local/augustus/adh.fa
+        type: FASTA
+        summary: A 2.9 Mb long sequence from the Drosophila adh region (copied from the GASP dataset page)
+    }
+
+    {
+        name: ADH partial region.gff
+        value: export/local/augustus/adh.gff
+        type: GFF
+        summary: Genes from a  2.9 Mb long sequence from the Drosophila adh region.
+    }
+
+    {
+        name: RNA-Seq Paired End Collection
+        value: export/local/rnaseq/reads-PE
+        type: RNASEQ, FASTQ
+        summary: This collection contains paired end data from 6 samples under 2 conditions(Griffith dataset subset).
+    }
+
+    {
+        name: RNA-Seq Single End Collection
+        value: export/local/rnaseq/reads-SE
+        type: RNASEQ, FASTQ
+        summary: This collection contains single end data from 6 samples under 2 conditions(Griffith dataset subset).
+    }
+
+    {
+        name: Transcripts from chr22 human genome.fa
+        value: export/local/rnaseq/refs/chr22_transcripts.fa
+        type: FASTA, TRANSCRIPTS
+        summary: Transcript sequences from human chromosome 22.
+    }
+
+    {
+        name: Qiime2 testdata
+        value: export/local/qiime2/data
+        type: FASTQ, COLLECTION
+        summary: Test dataset for qiime2 taxonomic classification.
+
+    }
+    {
+        name: Test metadata sheet for Qiime2
+        value: export/local/qiime2/12s_metadata_file_validated.csv
+        type: CSV
+        summary:Sample metadata for qiime2 classification testdata
+
+    }
+
+    {
+        name: Reference file for Qiime2 testdata
+        value: export/local/qiime2/12s-ref-qiime2.fasta
+        type: FASTA
+        summary:Reference sequence as fasta file.
+
+    }
+
+    {
+        name: Samplesheet for PCR barcoded Testdata
+        value: export/local/usfish/pcr-barcoded-samplesheet.csv
+        type: CSV
+        summary: This file contains information on the metabarcode data.
+
+    }
+    {
+        name: Fish PCR Barcoded Testdata
+        value: export/local/usfish/pcr-barcoded-data
+        type: FASTQ
+        summary: This collections contains fish pcr-barcoded data.
+
+    }
+
+
+]
+}

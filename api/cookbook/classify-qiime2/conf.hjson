@@ -1,0 +1,144 @@
+{
+  reads:
+  {
+    value: Qiime2 testdata
+    label: Sequencing Data Directory or a Zip File
+    help: Multiple paired-end sequencing reads.
+    source: PROJECT
+    type: FASTQ|ZIP
+    display: DROPDOWN
+  }
+  sheet:
+  {
+    value: Test metadata sheet for Qiime2
+    label: Sample metadata
+    help: The sample metadata
+    source: PROJECT
+    type: CSV
+    display: DROPDOWN
+  }
+  reference:
+  {
+    value: Reference file for Qiime2 testdata
+    label: Reference Sequences to classify against
+    help: The sequences to classify against
+    source: PROJECT
+    type: FASTA
+    display: DROPDOWN
+  }
+  library:
+  {
+    value: PE
+    label: Library layout
+    help: Specify the library type.
+    display: DROPDOWN
+    choices:
+    [
+      [
+        SE
+        Single end
+      ]
+      [
+        PE
+        Paired end
+      ]
+    ]
+  }
+  trunc_right_f:
+  {
+    value: 120
+    label: 3' end position to truncate in read1
+    help: Position at which forward reads to be truncated from at 3' end.
+    display: INTEGER
+    range:
+    [
+      0
+      500
+    ]
+  }
+  trunc_left_f:
+  {
+    value: 10
+    label: No. of bases to be trimmed off from 5'end in read1
+    help: No. of bases to be trimmed off from 5'end in read1.
+    display: INTEGER
+    range:
+    [
+      0
+      500
+    ]
+  }
+  trunc_right_r:
+  {
+    value: 120
+    label: 3' end position to truncate in read2
+    help: Position at which reverse reads to be truncated from at 3' end.
+    display: INTEGER
+    range:
+    [
+      0
+      500
+    ]
+  }
+  trunc_left_r:
+  {
+    value: 10
+    label: No. of bases to be trimmed off from 5'end in read2
+    help: No. of bases to be trimmed off from 5'end in read2.
+    display: INTEGER
+    range:
+    [
+      0
+      500
+    ]
+  }
+  perc_identity:
+  {
+    value: 0.99
+    label: Minimum percentage identity for BLAST
+    help: Minimum percentage identity for BLAST.
+    display: FLOAT
+    range:
+    [
+      0
+      1
+    ]
+  }
+  settings:
+  {
+    name: Classification of Sequences Using Tools in Qiime2
+    image: classify-qiime2.png
+    help:
+      '''
+      Taxonomic classification of sequence reads using tools in Qiime2.
+
+      # Help
+
+      This recipe makes use of the tools implemented in qiime2 for the taxonomic classification
+      of input sequence reads.
+
+      Sequence quality control and feature table construction are done using qiime-dada2 plugin.
+
+      BLAST+ consensus taxonomy classifier is used for the taxonomic classification of de-noised data set.
+
+      ## Output
+
+      The following are the output visualization files.
+
+      1. A heatmap of the percentages at different taxonomic levels.
+      2. A taxonomic classification barplot that can be visualized using qiime2 viewer.
+
+      In addition, the recipe also produces count tables and percent tables at different taxonomic levels.
+
+
+      ## Input
+
+      The required input files are
+
+      1. Input data directory with sequenced reads or a zipped file of all sequence fastq files. (File name must look like L2S357_15_L001_R1_001.fastq.gz).
+      2. Sample sheet in csv format. First column should contain sample ids. Rest of the columns don't matter.
+      3. Reference sequences with accessions as fasta file.
+
+      '''
+  }
+}

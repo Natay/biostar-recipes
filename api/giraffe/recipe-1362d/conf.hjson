@@ -1,0 +1,49 @@
+{
+  reads:
+  {
+    value: FASTQ Data Collection
+    label: Sequencing Reads
+    type: FASTQ
+    display: DROPDOWN
+    source: PROJECT
+    help: This should be a collection of FASTQ files.
+  }
+  group:
+  {
+    label: Plot features
+    display: DROPDOWN
+    choices:
+    [
+      [
+        default
+        Default
+      ]
+      [
+        nogroup
+        No Grouping
+      ]
+    ]
+    value: default
+    help: Turns on/off binning in the plots.
+  }
+  summarize:
+  {
+    label: Summarize with MultiQC
+    display: CHECKBOX
+    value: true
+    help: Check this to produce a single plot with all data overlaid.
+  }
+  settings:
+  {
+    name: Visualize FASTQ data quality
+    image: fastqc.png
+    summary: Generates a FastQC report from a data collection.
+    help:
+      '''
+
+      # Help
+
+      Generates a FastQC report on a single file or a data collection.
+      '''
+  }
+}

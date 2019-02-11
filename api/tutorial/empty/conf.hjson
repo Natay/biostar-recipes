@@ -1,0 +1,7 @@
+{
+  settings:
+  {
+    name: New Recipe
+    help: Recipe description
+  }
+}

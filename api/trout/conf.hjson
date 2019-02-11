@@ -1,42 +1,18 @@
 {
-
-settings: {
+  settings:
+  {
     uid: trout
-
     name: Wisconsin Brook Trout
+    image: trout.png
+    privacy: Private
+    help:
+      '''
+      # More information
 
-    image: trout-project.jpg
-
-    summary: '''
-    Methodological comparison of electrofishing, qPCR and metabarcoding in Wisconsin streams
-    '''
-
-    text: '''
-    # More information
-
-    NEFC and Ashland FWCO study of eDNA and electrofishing techniques.
-    '''
-}
-
-analyses: [
-
-    {
-        json: recipes/classify/classify-centrifuge.hjson
-        template: recipes/classify/classify-centrifuge.sh
-    }
-
-    {
-        json: recipes/classify/classify-alignments.hjson
-        template: recipes/classify/classify-alignments.sh
-    }
-    {
-        json: recipes/usfish/trim-merge.hjson
-        template: recipes/usfish/trim-merge.sh
-    }
-
-    ]
-
-data: [
+      NEFC and Ashland FWCO study of eDNA and electrofishing techniques.
+      '''
+  }
+  data: [
 
     {
         name: Fish Sequences by Accession Number
@@ -107,5 +83,4 @@ data: [
      }
 
     ]
-
 }

@@ -1,0 +1,33 @@
+{
+  size:
+  {
+    label: Sample size
+    display: INTEGER
+    range:
+    [
+      1
+      10000
+    ]
+    value: 1000
+  }
+  settings:
+  {
+    name: R Script
+    image: rscript.jpg
+    execute:
+    {
+      filename: recipe.r
+      command: Rscript --vanilla recipe.r
+    }
+    help:
+      '''
+      This recipe demonstrates the use of an R script as a recipe.
+      # Help
+
+      This recipe is a demonstration of using an R script as a recipe.
+
+      It creates a barplot of the `sample` function.
+
+      '''
+  }
+}
