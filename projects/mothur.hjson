@@ -1,0 +1,23 @@
+{
+  settings:
+  {
+    uid: mothur
+    name: Metagenomics with the Mothur Package
+    image: mothur.jpg
+    privacy: Public
+    help: "Preform metagenomics using Mothur package."
+  }
+  data: [
+
+    {
+        name: Metagenomics Data Directory
+        value: /export/data/mothur-study1
+        type: MOTHUR
+        help: '''
+        A prepackaged data set with test files.
+        Contains reads in a directory and a file list.
+        '''
+    }
+
+    ]
+}

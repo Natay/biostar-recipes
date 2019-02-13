@@ -1,0 +1,76 @@
+{
+  settings:
+  {
+    uid: fish
+    name: Fish Metabarcoding
+    image: fish.jpg
+    privacy: Public
+    help: Metabarcoded data
+  }
+  data: [
+
+        {
+            name: Fish database.fa
+            value: /export/data/usfish/reference/fishdb.fa
+            type: FASTA
+            help: '''
+            Fish specific DNA sequences .
+            Provided as an example.
+            '''
+        }
+
+        {
+            name: Fish Metabarcode Testdata
+            value: export/local/usfish/
+            type: FASTQ, COLLECTION
+            help: This collections contains fish metabarcode data.
+
+        }
+
+        {
+            name: Samplesheet for Fish Metabarcode Testdata
+            value: export/local/usfish/sample-sheet.csv
+            type: CSV
+            help: This file contains information on the metabarcode data.
+        }
+
+
+        {
+            name: Sequencing Run 1
+            value: /export/data/usfish/runs/run1
+            type: FASTQ, COLLECTION
+            help: Data for sequencing run 1
+        }
+
+        {
+            name: Sample sheet for Sequencing Run 1
+            value: /export/data/usfish/runs/run1-sample-sheet.csv
+            type: CSV
+            help: '''
+            Specfications for the data in Sequencing Run 1
+            This file is in a format agreed to when developing the recipe. It contains a number of columns
+            that describe the samples names, barcodes, primers and file names.
+            '''
+
+        }
+
+        {
+            name: Sequencing Run 2
+            value: /export/data/usfish/runs/run2
+            type: FASTQ, COLLECTION
+            help: Data for sequencing run 2
+        }
+
+        {
+            name: Sample sheet for Sequencing Run 2
+            value: /export/data/usfish/runs/run2-sample-sheet.csv
+            type: CSV
+            help: '''
+            Sample description for Sequencing Run 2
+            This file is in a format agreed to when developing the recipe. It contains a number of columns
+            that describe the samples names, barcodes, primers and file names.
+            '''
+
+        }
+    ]
+}
