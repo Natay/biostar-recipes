@@ -1,0 +1,101 @@
+{
+  reads:
+  {
+    value: Fish Metabarcode Testdata
+    label: Sequencing Data Directory
+    help: Multiple paired-end sequencing reads.
+    source: PROJECT
+    type: FASTQ
+    display: DROPDOWN
+  }
+  sheet:
+  {
+    value: Samplesheet for Fish Metabarcode Testdata
+    label: Sample description
+    help: The sample sheet that describes the data
+    source: PROJECT
+    type: CSV
+    display: DROPDOWN
+  }
+  genome:
+  {
+    value: Fish Sequences by Common Name
+    label: Reference genome
+    help: The reference genome
+    source: PROJECT
+    type: FASTA
+    display: DROPDOWN
+  }
+  minlen:
+  {
+    value: 180
+    label: Minimum length
+    help: The minimal alignment length of the merged reads
+    display: FLOAT
+    range:
+    [
+      0
+      10000
+    ]
+  }
+  cutoff:
+  {
+    value: 1
+    label: Report cutoff
+    help: The minimal sum for each row in the final classification.
+    display: FLOAT
+    range:
+    [
+      0
+      10000
+    ]
+  }
+  threads:
+  {
+    value: 2
+  }
+  settings:
+  {
+    name: Classify sequences using alignments
+    image: trout-classify-alignments.png
+    help:
+      '''
+      Classifies overlapping reads with bwa.
+
+      # Help
+
+      This recipe aligns sequencing reads to a reference genome. The input data should be overlapping paired end sequences.
+      The recipe makes use of tools from the BBMap software package then and aligns the processed reads
+      via the BWA short read aligner. Consult the code of the recipe for the exact parameters applied in each step.
+
+      The following protocol is followed:
+
+      1. Error correction with `tadpole.sh`
+      2. Filtering reads with `cutadapt` to keep only pairs that contains the primers at their 5' end
+      3. Merging overlapping reads with `bbmerge.sh`
+      4. Aligning merged reads with the `bwa` aligner.
+      5. Filtering the alignments for unique, primary hits that are over a minimal length.
+      6. Generating a summary table with the percent hit to each sequences across each sample.
+
+      Produces a heatmap of the aligned sequences relative to the various sequences in the file.
+
+      # Parameters
+
+      1. Input data collection in FASTQ format.
+      2. Reference genome sequences in FASTA format.
+      3. A sample sheet in CSV format that describes the primers for each sample.
+
+      # Requirements
+
+      For paired end reads, naming should be such that after sorting by filename the pairs follow one another
+      with the first in pair coming first.
+
+      # Results
+      1. Combined count report
+      2. Combined percent report and heatmap visualization.
+      3. Aligned bam files in the `results/bam` folder.
+      4. Per-sample alignment statistics `results/counts/` folder.
+
+      '''
+  }
+}
