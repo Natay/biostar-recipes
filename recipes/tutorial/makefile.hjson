@@ -1,41 +1,55 @@
 {
-
-  command: {
+  command:
+  {
     label: Make command
     display: DROPDOWN
-    choices: [
-      [ "all", "make all" ]
-      [ "clean", "make clean" ]
+    choices:
+    [
+      [
+        all
+        make all
+      ]
+      [
+        clean
+        make clean
+      ]
     ]
     value: all
   }
-
-  library: {
+  library:
+  {
     label: Library type
     display: DROPDOWN
-    choices: [
-      [ "SE", "Single End" ]
-      [ "PE", "Paired End" ]
+    choices:
+    [
+      [
+        SE
+        Single End
+      ]
+      [
+        PE
+        Paired End
+      ]
     ]
     value: SE
   }
-
-  settings: {
+  settings:
+  {
     name: Makefile Example
-    summary: This recipe demonstrates the use of makefiles.
     image: makefile.jpg
-    execute: {
-       filename: "Makefile"
-       command: "make -f Makefile {{command.value}}"
+    execute:
+    {
+      filename: Makefile
+      command: make -f Makefile {{command.value}}
     }
     help:
-    '''
-    # Help
+      '''
+      This recipe demonstrates the use of makefiles.
+      # Help
 
-    This recipe is a demonstration of using a Makefile as a recipe.
+      This recipe is a demonstration of using a Makefile as a recipe.
 
-    In the source note how we have a substitution in the command as well.
-    '''
+      In the source note how we have a substitution in the command as well.
+      '''
   }
-
 }

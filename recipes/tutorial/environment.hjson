@@ -2,10 +2,10 @@
   settings:
   {
     name: Environment Check
-    summary: This recipe prints the bash environment used to run the script.
     image: environment.jpg
     help:
       '''
+      This recipe prints the bash environment used to run the script.
       # Help
 
       This recipe uses the `printenv` command to display the current environment.

@@ -1,0 +1,17 @@
+{% load igv %}<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<Session genome="{{ genome.link }}" hasGeneTrack="false" hasSequenceTrack="false" locus="" path="{{genome.link}}" version="8">
+
+    <Resources>
+        {% for bunch in bams %}
+            <Resource path="{{ bunch.link }}"/>
+        {%  endfor %}
+    </Resources>
+
+    <Panel height="744" name="DataPanel" width="1737">
+        {% for bunch in bams %}
+            {% bam bunch %}
+        {% endfor %}
+    </Panel>
+
+</Session>

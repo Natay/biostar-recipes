@@ -1,10 +1,11 @@
 {
-  settings: {
+  settings:
+  {
     name: Hello World
-    summary: This recipe prints: Hello World!
     image: hello-world.png
     help:
       '''
+      This recipe prints: Hello World!
       # More Help
 
       This recipe prints **Hello World!** to the console.

@@ -1,0 +1,13 @@
+name	taxID	taxRank	genomeSize	numReads	numUniqueReads	abundance
+Amia calva	7924	species	16210	768	768	0.0
+Catostomus commersonii	7971	species	35944	208	208	0.0
+Osmerus mordax	8014	species	16620	1	1	0.0
+Salvelinus fontinalis	8038	species	16624	3	3	0.0
+Lepomis macrochirus	13106	species	33147	1224	1222	0.0
+Ameiurus nebulosus	27778	species	3309	262	251	0.0
+Lepisosteus osseus	34771	species	16328	1642	1642	0.0
+Alosa pseudoharengus	34774	species	16646	1129	1129	0.0
+Acipenser fulvescens	41871	species	16542	1150	1150	0.0
+Fundulus diaphanus	54267	species	16531	885	885	0.0
+Esox niger	184451	species	15936	1	1	0.0
+Ameiurus melas	219545	species	16512	11	0	0.0

@@ -1,35 +1,35 @@
 {
-
-input: {
-        label: FastQ Reads
-        value: Metagenomics Data Directory
-        help: A directory structure
-        summary: A prepackaged directory structure.
-        source: PROJECT
-        type: MOTHUR
-        display: DROPDOWN
+  input:
+  {
+    label: FastQ Reads
+    value: Metagenomics Data Directory
+    help: A directory structure
+    summary: A prepackaged directory structure.
+    source: PROJECT
+    type: MOTHUR
+    display: DROPDOWN
+  }
+  settings:
+  {
+    id: classify
+    name: 16S Metagenomics Pipeline
+    image: study1.png
+    execute:
+    {
+      filename: commands.txt
+      command: mothur commands.txt
     }
+    help:
+      '''
+      A metagenomics pipeline for 16S sequence analysis using the `mothur` software.
 
-settings: {
-        id: classify
-        name: 16S Metagenomics Pipeline
-        image: study1.png
-        execute: {
-            filename: "commands.txt"
-            command: "mothur commands.txt"
-        }
-        summary: A metagenomics pipeline for 16S sequence analysis using the `mothur` software.
-        help:
-            '''
+      # Help
 
-            # Help
+      This recipe demonstrates a complex pipeline designed to operate on data arranged in a specific manner.
 
-            This recipe demonstrates a complex pipeline designed to operate on data arranged in a specific manner.
-
-            It follows a mothur Standard Operating Protocol and will generate a wide array of results.
+      It follows a mothur Standard Operating Protocol and will generate a wide array of results.
 
 
-            '''
-    }
-
+      '''
+  }
 }
