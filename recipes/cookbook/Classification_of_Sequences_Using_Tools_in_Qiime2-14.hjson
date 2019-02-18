@@ -140,5 +140,9 @@
       3. Reference sequences with accessions as fasta file.
 
       '''
+    id: 14
+    uid: classify-qiime2
+    project_uid: cookbook
+    url: http://localhost:8000
   }
 }

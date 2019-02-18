@@ -53,7 +53,7 @@
     image: check-pcr-barcodes.png
     help:
       '''
-    Estimate the fraction of reads that contain correct PCR barcodes and filter out reads with incorrect pcr barcodes.
+      Estimate the fraction of reads that contain correct PCR barcodes and filter out reads with incorrect pcr barcodes.
       # Help
 
       This recipe will check for PCR barcode in the data and filter out reads that do not contain correct PCR-barcode using cutadapt.
@@ -80,5 +80,9 @@
       3. Tables with the no.of reads with correct and incorrect pcr-barcode in each sample.
 
       '''
+    id: 8
+    uid: check-pcr-barcodes
+    project_uid: cookbook
+    url: http://localhost:8000
   }
 }

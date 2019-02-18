@@ -61,6 +61,7 @@
     help:
       '''
       Classifies overlapping reads with bwa.
+
       # Help
 
       This recipe aligns sequencing reads to a reference genome. The input data should be overlapping paired end sequences.
@@ -96,5 +97,9 @@
       4. Per-sample alignment statistics `results/counts/` folder.
 
       '''
+    id: 17
+    uid: fish-classify-alignments
+    project_uid: fish
+    url: http://localhost:8000
   }
 }

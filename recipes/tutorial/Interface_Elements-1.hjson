@@ -92,5 +92,9 @@
 
       This recipe is a demonstration of all parameter types that the system recognizes.
       '''
+    id: 1
+    uid: interface
+    project_uid: tutorial
+    url: http://localhost:8000
   }
 }

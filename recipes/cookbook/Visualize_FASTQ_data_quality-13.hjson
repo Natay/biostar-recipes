@@ -36,13 +36,17 @@
   settings:
   {
     name: Visualize FASTQ data quality
-    image: giraffe-fastqc.png
+    image: fastqc.png
     help:
       '''
-      Generates a FastQC report from a data collection.
+        Generates a FastQC report from a data collection.
       # Help
 
       Generates a FastQC report on a single file or a data collection.
       '''
+    id: 13
+    uid: fastqc
+    project_uid: cookbook
+    url: http://localhost:8000
   }
 }

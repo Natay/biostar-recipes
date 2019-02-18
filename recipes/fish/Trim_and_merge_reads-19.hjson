@@ -58,7 +58,7 @@
   settings:
   {
     name: Trim and merge reads
-    image: trout-trim-merge.png
+    image: trim-merge.png
     help:
       '''
       Performs primer removal, quality trimming and merging of paired end reads.
@@ -98,5 +98,9 @@
       4. Size selected reads in selected directory.
 
       '''
+    id: 19
+    uid: fish-trim-merge
+    project_uid: fish
+    url: http://localhost:8000
   }
 }

@@ -30,7 +30,7 @@
     image: augustus.png
     help:
       '''
-Predicts protein coding regions in a DNA sequence using the Augustus software.
+      Predicts protein coding regions in a DNA sequence using the Augustus software.
       # Help
 
       This recipe predicts genes in an assembled genome using augustus.
@@ -49,5 +49,9 @@ Predicts protein coding regions in a DNA sequence using the Augustus software.
       2. Annotated transcripts in tabular format.
 
       '''
+    id: 11
+    uid: augustus
+    project_uid: cookbook
+    url: http://localhost:8000
   }
 }

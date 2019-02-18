@@ -33,5 +33,9 @@
       It will automatically download the sequencing data from the remote site.
 
       '''
+    id: 24
+    uid: rnaseq-demo
+    project_uid: handbook
+    url: http://localhost:8000
   }
 }

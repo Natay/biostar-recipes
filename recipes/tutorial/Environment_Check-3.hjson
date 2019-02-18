@@ -12,5 +12,9 @@
 
       It prints the information into a file for later processing but also displays it on the standard output.
       '''
+    id: 3
+    uid: environment
+    project_uid: tutorial
+    url: http://localhost:8000
   }
 }

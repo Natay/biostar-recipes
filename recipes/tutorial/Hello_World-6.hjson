@@ -14,5 +14,9 @@
 
       You may use `Markdown` in the summary and help.
       '''
+    id: 6
+    uid: hello-world
+    project_uid: tutorial
+    url: http://localhost:8000
   }
 }

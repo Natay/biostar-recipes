@@ -121,5 +121,9 @@
 
       Users may view the sample input files for more information on the precise file formats.
       '''
+    id: 18
+    uid: fish-classify-centrifuge
+    project_uid: fish
+    url: http://localhost:8000
   }
 }

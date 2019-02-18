@@ -127,5 +127,9 @@
       3. Fastqc report of sequence(s) after quality control inside the output folder within fastqc_reports_after_trimming.
 
       '''
+    id: 16
+    uid: quality-check
+    project_uid: cookbook
+    url: http://localhost:8000
   }
 }

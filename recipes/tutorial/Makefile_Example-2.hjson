@@ -51,5 +51,9 @@
 
       In the source note how we have a substitution in the command as well.
       '''
+    id: 2
+    uid: makefile
+    project_uid: tutorial
+    url: http://localhost:8000
   }
 }

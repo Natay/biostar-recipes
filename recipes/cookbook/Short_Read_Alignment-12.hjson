@@ -112,5 +112,9 @@
       2. Alignment statistics in the `flagstat.txt` and `idxstats.txt` files.
 
       '''
+    id: 12
+    uid: short-read-alignment
+    project_uid: cookbook
+    url: http://localhost:8000
   }
 }

@@ -86,7 +86,7 @@
   settings:
   {
     name: Short Read Alignment
-    image: giraffe-short-alignment.png
+    image: short-read-alignment.png
     help:
       '''
       Align short reads with different methodologies: bwa, bowtie2, hisat2
@@ -111,5 +111,9 @@
       2. Alignment statistics in the `flagstat.txt` and `idxstats.txt` files.
 
       '''
+    id: 23
+    uid: giraffe-short-alignment
+    project_uid: giraffe
+    url: http://localhost:8000
   }
 }

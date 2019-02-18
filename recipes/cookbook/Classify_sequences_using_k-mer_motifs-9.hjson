@@ -71,7 +71,7 @@
   settings:
   {
     name: Classify sequences using k-mer motifs
-    image: trout-classify-centrifuge.jpg
+    image: classify-centrifuge.jpg
     help:
       '''
       Classify paired end reads with a k-mer based approach using the Centrifuge software.
@@ -120,5 +120,9 @@
 
       Users may view the sample input files for more information on the precise file formats.
       '''
+    id: 9
+    uid: classify-centrifuge
+    project_uid: cookbook
+    url: http://localhost:8000
   }
 }

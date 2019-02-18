@@ -1,3 +1,5 @@
+TESTTTTTT
+
 #
 # Set a logfile destination.
 #

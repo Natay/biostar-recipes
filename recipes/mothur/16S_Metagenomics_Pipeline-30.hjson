@@ -11,7 +11,7 @@
   }
   settings:
   {
-    id: classify
+    id: 30
     name: 16S Metagenomics Pipeline
     image: study1.png
     execute:
@@ -31,5 +31,8 @@
 
 
       '''
+    uid: study1
+    project_uid: mothur
+    url: http://localhost:8000
   }
 }

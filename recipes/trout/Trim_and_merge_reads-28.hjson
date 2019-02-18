@@ -98,5 +98,9 @@
       4. Size selected reads in selected directory.
 
       '''
+    id: 28
+    uid: trout-trim-merge
+    project_uid: trout
+    url: http://localhost:8000
   }
 }

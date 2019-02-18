@@ -29,5 +29,9 @@
       It creates a barplot of the `sample` function.
 
       '''
+    id: 5
+    uid: rscript
+    project_uid: tutorial
+    url: http://localhost:8000
   }
 }

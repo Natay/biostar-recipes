@@ -84,7 +84,7 @@
   settings:
   {
     name: RNA-Seq Transcript Abundance Estimation
-    image: giraffe-pseudo-alignment.png
+    image: pseudo-alignment.png
     help:
       '''
       Transcript abundance estimations using different algorithms: Kallisto, Salmon.
@@ -112,5 +112,9 @@
 
 
       '''
+    id: 22
+    uid: giraffe-pseudo-alignment
+    project_uid: giraffe
+    url: http://localhost:8000
   }
 }

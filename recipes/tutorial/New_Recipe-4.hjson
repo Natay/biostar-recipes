@@ -1,0 +1,11 @@
+{
+  settings:
+  {
+    name: New Recipe
+    help: Recipe description
+    id: 4
+    uid: empty
+    project_uid: tutorial
+    url: http://localhost:8000
+  }
+}

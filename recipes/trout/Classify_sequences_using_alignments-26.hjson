@@ -97,5 +97,9 @@
       4. Per-sample alignment statistics `results/counts/` folder.
 
       '''
+    id: 26
+    uid: trout-classify-alignments
+    project_uid: trout
+    url: http://localhost:8000
   }
 }
