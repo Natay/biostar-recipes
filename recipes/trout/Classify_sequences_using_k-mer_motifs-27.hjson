@@ -1,0 +1,128 @@
+{
+  reads:
+  {
+    value: Fish Metabarcode Testdata
+    label: Sequencing Data Directory
+    help: Multiple paired-end sequencing reads.
+    source: PROJECT
+    type: FASTQ
+    display: DROPDOWN
+  }
+  sheet:
+  {
+    value: Samplesheet for Fish Metabarcode Testdata
+    label: Sample description
+    help: The sample sheet that describes the data
+    source: PROJECT
+    type: CSV
+    display: DROPDOWN
+  }
+  library:
+  {
+    value: SE
+    label: Library layout
+    help: Specify the library type.
+    display: DROPDOWN
+    choices:
+    [
+      [
+        SE
+        Single end
+      ]
+      [
+        PE
+        Paired end
+      ]
+    ]
+  }
+  reference:
+  {
+    value: Fish Sequences by Accession Number
+    label: Reference Sequences
+    help: The sequences to classify against
+    source: PROJECT
+    type: FASTA
+    display: DROPDOWN
+  }
+  hitlen:
+  {
+    value: 150
+    label: Minimum Length
+    help: The minimum length of the match to accept the classification.
+    display: INTEGER
+    range:
+    [
+      20
+      500
+    ]
+  }
+  cutoff:
+  {
+    value: 1
+    label: Report cutoff
+    help: The minimal sum for each row in the final classification.
+    display: FLOAT
+    range:
+    [
+      0
+      10000
+    ]
+  }
+  settings:
+  {
+    name: Classify sequences using k-mer motifs
+    image: classify-centrifuge.jpg
+    help:
+      '''
+      Classify paired end reads with a k-mer based approach using the Centrifuge software.
+      # Help
+
+      Centrifuge is a microbial classification software that enables rapid, accurate,
+      and sensitive labeling of reads and quantification of species.
+
+      This recipe will execute the Centrifuge software and classify against a database created from
+      a custom FASTA file.
+
+      A requirement of the custom FASTA file is that it must label the sequences by their accession number.
+
+      The resulting datasets are text reports listing the percent abundance for each species
+      that that was found in the sample:
+
+      ```
+      ###
+      ### Rank: Species
+      ###
+      name                    taxid   rank  1000-MiFish_R1  WI-10_S10_L001_R1
+      Lepisosteus osseus      34771   S     21.48           0.07
+      Cottus bairdii          147208  S     0.02            15.73
+      Cottus cognatus         147210  S     0.02            15.73
+      Lepomis macrochirus     13106   S     13.94           0.01
+      Acipenser fulvescens    41871   S     13.01           0.04
+      Alosa pseudoharengus    34774   S     12.81           0.04
+      Fundulus diaphanus      54267   S     10.49           0.01
+      ...
+      ```
+
+      A different section is generated at each taxonomic rank.
+
+      The following visualizations are generated:
+
+      1. A heatmap of the percentages at the species level.
+      2. A rarefaction curve for each of the samples.
+
+      Tool website: <https://ccb.jhu.edu/software/centrifuge/manual.shtml#introduction>
+
+      ## Input files
+
+      1. A directory that contains all the datafiles.
+      2. A sample sheet that connects the read pairs to file names
+      3. A reference file that contains the genomic sequences for the sequences that should be classified against.
+
+      Users may view the sample input files for more information on the precise file formats.
+      '''
+    id: 27
+    uid: trout-classify-centrifuge
+    project_uid: trout
+    url: http://localhost:8000
+  }
+}

@@ -1,0 +1,3 @@
+readID	seqID	taxID	score	2ndBestScore	hitLength	queryLength	numMatches
+a	AB188190	147210	21316	21316	161	502	2
+b	NC_028277	147208	21316	21316	161	502	2

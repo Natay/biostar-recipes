@@ -1,0 +1,135 @@
+{
+  reads:
+  {
+    value: Single End Reads.fq
+    label: Sequencing Data Directory
+    source: PROJECT
+    type: FASTQ
+    display: DROPDOWN
+  }
+  quality:
+  {
+    label: Quality Score
+    display: INTEGER
+    value: 30
+    help: Average threshold quality score within the window. Put 0 if you do not want to perform sliding window trimming.
+    range:
+    [
+      0
+      50
+    ]
+  }
+  minLength:
+  {
+    label: Minimum Length
+    display: INTEGER
+    value: 35
+    help: The recipe removes reads that fall below the specified minimum length.
+    range:
+    [
+      0
+      400
+    ]
+  }
+  window:
+  {
+    label: Window Size
+    display: INTEGER
+    value: 4
+    help: Window size to calculate average threshold quality.
+    range:
+    [
+      0
+      20
+    ]
+  }
+  group:
+  {
+    label: Plot features
+    display: DROPDOWN
+    help: Default enables grouping of bases for reads greater than >50 bp. For long reads, --nogroup might lead to crash of fastqc and/or generate large size plots.
+    choices:
+    [
+      [
+        default
+        Default
+      ]
+      [
+        nogroup
+        No Group
+      ]
+    ]
+    value: default
+  }
+  library:
+  {
+    value: SE
+    label: Library layout
+    display: RADIO
+    choices:
+    [
+      [
+        SE
+        Single end
+      ]
+      [
+        PE
+        Paired end
+      ]
+    ]
+  }
+  adapter:
+  {
+    value: No_adapter
+    label: Adapter type
+    display: RADIO
+    choices:
+    [
+      [
+        No_adapter
+        No Adapter trimming
+      ]
+      [
+        AGATCGGAAGAG
+        Illumina Universal Adapter: AGATCGGAAGAG
+      ]
+      [
+        CTGTCTCTTATA
+        Nextera Transposase Sequence: CTGTCTCTTATA
+      ]
+    ]
+  }
+  settings:
+  {
+    name: Improve the quality of sequencing reads
+    image: quality-check.png
+    help:
+      '''
+      Improves the quality of sequence reads by trimming low quality reads and/or adapter. Performs sliding window trimming followed by an optional adapter trimming step.
+      #Help
+      This recipe is used for pre-processing of sequencing reads.
+      The data obtained from the sequencer can have poor quality or technical sequences (like adapters).
+      Removing those sequences can improve the downstream analysis.
+      This recipe can be used to remove those poor quality sequences and/or adapter sequences from sequencer.
+
+      #Parameters:
+      1. Group or no-group for fastqc analysis.
+      2. Single end reads or Paired end reads.
+      3. Threshold quality score.
+      4. Minimum length of reads
+      5. Window size for trimming.
+      6. Adapter type for adapter removal.
+
+
+      #Output
+      1. Fastqc report of sequence(s) before quality control in folder fastqc_reports.
+      2. Trimmed Reads
+      3. Fastqc report of sequence(s) after quality control inside the output folder within fastqc_reports_after_trimming.
+
+      '''
+    id: 16
+    uid: quality-check
+    project_uid: cookbook
+    url: http://localhost:8000
+  }
+}

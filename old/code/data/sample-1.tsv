@@ -1,0 +1,9 @@
+name	taxID	taxRank	genomeSize	numReads	numUniqueReads	abundance
+Oncorhynchus kisutch	8019	species	16659	592	592	0.0
+Oncorhynchus mykiss	8022	species	70090	226	105	0.0
+Salmo trutta	8032	species	16847	57	57	0.0
+Salvelinus fontinalis	8038	species	16624	3	3	0.0
+Salvelinus namaycush	8040	species	16653	25	25	0.0
+Semotilus atromaculatus	67558	species	33244	63	61	0.0
+Cottus cognatus	147210	species	783	2340	2340	0.0
+Lepomis gibbosus	270329	species	33006	26	26	0.0
