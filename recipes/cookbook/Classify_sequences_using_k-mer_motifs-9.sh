@@ -1,7 +1,7 @@
 set -uex
 
 # The input directory for the data
-DDIR=$(dirname{{reads.value}})
+DDIR=$(dirname {{reads.value}})
 
 # The reference directory to classify against.
 REFERENCE={{reference.value}}
