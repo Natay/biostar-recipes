@@ -45,6 +45,7 @@
       Generates a FastQC report on a single file or a data collection.
       '''
     id: 20
+    recipe_uid: fish-fastqc
     uid: fish-fastqc
     project_uid: fish
     url: http://localhost:8000

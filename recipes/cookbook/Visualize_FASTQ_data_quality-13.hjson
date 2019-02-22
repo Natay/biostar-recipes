@@ -45,6 +45,7 @@
       Generates a FastQC report on a single file or a data collection.
       '''
     id: 13
+    recipe_uid: fastqc
     uid: fastqc
     project_uid: cookbook
     url: http://localhost:8000

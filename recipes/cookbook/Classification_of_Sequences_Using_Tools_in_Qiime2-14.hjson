@@ -141,6 +141,7 @@
 
       '''
     id: 14
+    recipe_uid: classify-qiime2
     uid: classify-qiime2
     project_uid: cookbook
     url: http://localhost:8000

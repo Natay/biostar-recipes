@@ -15,6 +15,7 @@
       You may use `Markdown` in the summary and help.
       '''
     id: 6
+    recipe_uid: hello-world
     uid: hello-world
     project_uid: tutorial
     url: http://localhost:8000

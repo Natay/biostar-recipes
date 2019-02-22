@@ -114,6 +114,7 @@
 
       '''
     id: 10
+    recipe_uid: pseudo-alignment
     uid: pseudo-alignment
     project_uid: cookbook
     url: http://localhost:8000
