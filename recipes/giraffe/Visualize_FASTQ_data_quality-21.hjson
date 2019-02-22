@@ -45,6 +45,7 @@
       Generates a FastQC report on a single file or a data collection.
       '''
     id: 21
+    recipe_uid: giraffe-fastqc
     uid: giraffe-fastqc
     project_uid: giraffe
     url: http://localhost:8000

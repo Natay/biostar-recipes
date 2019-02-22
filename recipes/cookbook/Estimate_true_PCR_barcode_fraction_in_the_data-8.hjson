@@ -81,6 +81,7 @@
 
       '''
     id: 8
+    recipe_uid: check-pcr-barcodes
     uid: check-pcr-barcodes
     project_uid: cookbook
     url: http://localhost:8000

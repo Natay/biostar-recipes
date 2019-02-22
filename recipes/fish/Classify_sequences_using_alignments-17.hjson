@@ -98,6 +98,7 @@
 
       '''
     id: 17
+    recipe_uid: fish-classify-alignments
     uid: fish-classify-alignments
     project_uid: fish
     url: http://localhost:8000

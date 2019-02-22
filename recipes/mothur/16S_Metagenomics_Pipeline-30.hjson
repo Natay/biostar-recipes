@@ -31,6 +31,7 @@
 
 
       '''
+    recipe_uid: study1
     uid: study1
     project_uid: mothur
     url: http://localhost:8000

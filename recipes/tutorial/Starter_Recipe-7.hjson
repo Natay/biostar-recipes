@@ -51,6 +51,7 @@
       Use this recipe to create new recipes.
       '''
     id: 7
+    recipe_uid: starter
     uid: starter
     project_uid: tutorial
     url: http://localhost:8000

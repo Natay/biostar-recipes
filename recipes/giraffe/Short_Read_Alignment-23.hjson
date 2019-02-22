@@ -112,6 +112,7 @@
 
       '''
     id: 23
+    recipe_uid: giraffe-short-alignment
     uid: giraffe-short-alignment
     project_uid: giraffe
     url: http://localhost:8000

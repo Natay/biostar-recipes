@@ -113,6 +113,7 @@
 
       '''
     id: 12
+    recipe_uid: short-read-alignment
     uid: short-read-alignment
     project_uid: cookbook
     url: http://localhost:8000
