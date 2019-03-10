@@ -97,9 +97,10 @@
       4. Per-sample alignment statistics `results/counts/` folder.
 
       '''
-    id: 17
-    uid: fish-classify-alignments
-    project_uid: fish
+    id: 26
+    recipe_uid: trout-classify-alignments
+    uid: trout-classify-alignments
+    project_uid: trout
     url: http://localhost:8000
   }
 }

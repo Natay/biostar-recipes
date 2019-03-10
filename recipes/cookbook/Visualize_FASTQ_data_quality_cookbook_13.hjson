@@ -39,14 +39,15 @@
     image: fastqc.png
     help:
       '''
-      Generates a FastQC report from a data collection.
+        Generates a FastQC report from a data collection.
       # Help
 
       Generates a FastQC report on a single file or a data collection.
       '''
-    id: 20
-    uid: fish-fastqc
-    project_uid: fish
+    id: 13
+    recipe_uid: fastqc
+    uid: fastqc
+    project_uid: cookbook
     url: http://localhost:8000
   }
 }

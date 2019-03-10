@@ -97,6 +97,7 @@
 
       '''
     id: 15
+    recipe_uid:classify-alignments
     uid: classify-alignments
     project_uid: cookbook
     url: http://localhost:8000

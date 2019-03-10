@@ -30,6 +30,7 @@
 
       '''
     id: 5
+    recipe_uid: rscript
     uid: rscript
     project_uid: tutorial
     url: http://localhost:8000

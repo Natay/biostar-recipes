@@ -121,6 +121,7 @@
       Users may view the sample input files for more information on the precise file formats.
       '''
     id: 27
+    recipe_uid: trout-classify-centrifuge
     uid: trout-classify-centrifuge
     project_uid: trout
     url: http://localhost:8000

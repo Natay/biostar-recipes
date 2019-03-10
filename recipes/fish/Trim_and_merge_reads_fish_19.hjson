@@ -100,6 +100,7 @@
       '''
     id: 19
     uid: fish-trim-merge
+    recipe_uid: fish-trim-merge
     project_uid: fish
     url: http://localhost:8000
   }

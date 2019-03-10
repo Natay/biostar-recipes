@@ -90,6 +90,7 @@
     help:
       '''
       Align short reads with different methodologies: bwa, bowtie2, hisat2
+
       # Help
 
       This recipe aligns sequencing reads to a reference genome.
@@ -111,9 +112,10 @@
       2. Alignment statistics in the `flagstat.txt` and `idxstats.txt` files.
 
       '''
-    id: 23
-    uid: giraffe-short-alignment
-    project_uid: giraffe
+    id: 12
+    recipe_uid: short-read-alignment
+    uid: short-read-alignment
+    project_uid: cookbook
     url: http://localhost:8000
   }
 }

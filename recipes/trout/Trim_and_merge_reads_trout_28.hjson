@@ -100,6 +100,7 @@
       '''
     id: 28
     uid: trout-trim-merge
+    recipe_uid :trout-trim-merge
     project_uid: trout
     url: http://localhost:8000
   }

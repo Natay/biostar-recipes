@@ -75,6 +75,7 @@
     help:
       '''
       Classify paired end reads with a k-mer based approach using the Centrifuge software.
+
       # Help
 
       Centrifuge is a microbial classification software that enables rapid, accurate,
@@ -120,9 +121,10 @@
 
       Users may view the sample input files for more information on the precise file formats.
       '''
-    id: 9
-    uid: classify-centrifuge
-    project_uid: cookbook
+    id: 18
+    uid: fish-classify-centrifuge
+    recipe_uid: fish-classify-centrifuge
+    project_uid: fish
     url: http://localhost:8000
   }
 }
