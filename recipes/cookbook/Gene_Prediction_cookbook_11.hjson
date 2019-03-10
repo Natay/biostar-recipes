@@ -52,6 +52,7 @@
     id: 11
     recipe_uid: augustus
     uid: augustus
+    recipe_uid:augustus
     project_uid: cookbook
     url: http://localhost:8000
   }

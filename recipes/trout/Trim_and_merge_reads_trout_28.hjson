@@ -99,6 +99,7 @@
 
       '''
     id: 28
+    recipe_uid: trout-trim-merge
     uid: trout-trim-merge
     recipe_uid :trout-trim-merge
     project_uid: trout
