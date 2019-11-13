@@ -3,7 +3,7 @@ Biostar Recipes
 """
 from setuptools import setup
 
-from recipes import VERSION
+VERSION = '1.0'
 
 setup(
     name="Biostar Recipes",

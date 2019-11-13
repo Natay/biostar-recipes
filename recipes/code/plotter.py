@@ -42,6 +42,10 @@ def heatmap(data, colidx=3, labidx=0, fname='heatmap.png'):
     plt.rcParams.update({'figure.autolayout': True})
     # plt.figure(figsize=(10, 5))
 
+    if data.empty:
+        print("PLOTTER: Input data is empty.")
+        return
+
     df = pd.DataFrame()
 
     names = list(data.columns)
@@ -90,11 +94,11 @@ def heatmap(data, colidx=3, labidx=0, fname='heatmap.png'):
     ax = plt.gca()
 
     for t in ax.xaxis.get_major_ticks():
-        t.tick1On = False
-        t.tick2On = False
+        t.tick1line.set_visible = False
+        t.tick2line.set_visible = False
     for t in ax.yaxis.get_major_ticks():
-        t.tick1On = False
-        t.tick2On = False
+        t.tick1line.set_visible = False
+        t.tick2line.set_visible = False
 
     plt.xticks(rotation=90)
 
