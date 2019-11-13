@@ -98,10 +98,11 @@
       4. Size selected reads in selected directory.
 
       '''
-    id: 28
-    recipe_uid: trout-trim-merge
-    uid: trout-trim-merge
-    project_uid: trout
+    id: 19
+    recipe_uid: fish-trim-merge
+    uid: fish-trim-merge
+    recipe_uid: fish-trim-merge
+    project_uid: fish
     url: http://localhost:8000
   }
 }

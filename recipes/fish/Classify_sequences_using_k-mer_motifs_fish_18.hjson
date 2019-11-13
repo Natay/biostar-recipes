@@ -124,6 +124,7 @@
     id: 18
     recipe_uid: fish-classify-centrifuge
     uid: fish-classify-centrifuge
+    recipe_uid: fish-classify-centrifuge
     project_uid: fish
     url: http://localhost:8000
   }

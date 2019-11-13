@@ -1,0 +1,627 @@
+{
+  data: [
+
+    {
+    name: Ebola Genome.fa
+    value: export/local/bwa/AF086833.fa
+    type: FASTA
+    help: Ebola sequencing project.
+    project_uid: cookbook
+    }
+
+    {
+    name: Single End Reads.fq
+    value: export/local/bwa/SRR1972739.fq
+    type: FASTQ
+    help: Single end sequencing reads.
+    project_uid: cookbook
+    }
+
+    {
+    name: FASTQ Data Collection
+    value: export/local/fastqc/
+    type: FASTQ
+    help: This collections contains two different paired-end sequencing runs.
+    project_uid: cookbook
+    }
+
+    {
+    name: Fish Metabarcode Testdata
+    value: export/local/usfish/data
+    type: FASTQ
+    help: This collections contains fish metabarcode data.
+    project_uid: cookbook
+
+    }
+
+    {
+    name: Samplesheet for Fish Metabarcode Testdata
+    value: export/local/usfish/sample-sheet.csv
+    type: CSV
+    help: This file contains information on the metabarcode data.
+    project_uid: cookbook
+
+    }
+
+    {
+    name: Fish Sequences by Common Name
+    value: export/local/usfish/fishname.fa
+    type: FASTA
+    help: Fish genomic sequences identified by common names.
+    project_uid: cookbook
+    }
+
+    {
+    name: Fish Sequences by Accession Number
+    value: export/local/usfish/fishacc.fa
+    type: FASTA
+    help: Fish genomic sequences identified by accession numbers.
+    project_uid: cookbook
+    }
+
+
+    {
+    name: ADH partial region.fa
+    value: export/local/augustus/adh.fa
+    type: FASTA
+    help: A 2.9 Mb long sequence from the Drosophila adh region (copied from the GASP dataset page)
+    project_uid: cookbook
+    }
+
+    {
+    name: ADH partial region.gff
+    value: export/local/augustus/adh.gff
+    type: GFF
+    project_uid: cookbook
+    help: Genes from a  2.9 Mb long sequence from the Drosophila adh region.
+    }
+
+    {
+    name: RNA-Seq Paired End Collection
+    value: export/local/rnaseq/reads-PE
+    type: RNASEQ, FASTQ
+    project_uid: cookbook
+    help: This collection contains paired end data from 6 samples under 2 conditions(Griffith dataset subset).
+    }
+
+    {
+    name: RNA-Seq Single End Collection
+    value: export/local/rnaseq/reads-SE
+    type: RNASEQ, FASTQ
+    project_uid: cookbook
+    help: This collection contains single end data from 6 samples under 2 conditions(Griffith dataset subset).
+    }
+
+    {
+    name: Transcripts from chr22 human genome.fa
+    value: export/local/rnaseq/refs/chr22_transcripts.fa
+    type: FASTA, TRANSCRIPTS
+    project_uid: cookbook
+    help: Transcript sequences from human chromosome 22.
+    }
+
+    {
+    name: Qiime2 testdata
+    value: export/local/qiime2/data
+    type: FASTQ, COLLECTION
+    project_uid: cookbook
+    help: Test dataset for qiime2 taxonomic classification.
+
+    }
+    {
+    name: Test metadata sheet for Qiime2
+    value: export/local/qiime2/12s_metadata_file_validated.csv
+    type: CSV
+    project_uid: cookbook
+    help:Sample metadata for qiime2 classification testdata
+
+    }
+
+    {
+    name: Reference file for Qiime2 testdata
+    value: export/local/qiime2/12s-ref-qiime2.fasta
+    type: FASTA
+    project_uid: cookbook
+    help:Reference sequence as fasta file.
+
+    }
+
+    {
+    name: Samplesheet for PCR barcoded Testdata
+    value: export/local/usfish/pcr-barcoded-samplesheet.csv
+    type: CSV
+    project_uid: cookbook
+    help: This file contains information on the metabarcode data.
+
+    }
+    {
+    name: Fish PCR Barcoded Testdata
+    value: export/local/usfish/pcr-barcoded-data
+    type: FASTQ
+    project_uid: cookbook
+    help: This collections contains fish pcr-barcoded data.
+
+    }
+
+    {
+    name: Fish database.fa
+    value: /export/data/usfish/reference/fishdb.fa
+    type: FASTA
+    project_uid:fish
+    help: '''
+    Fish specific DNA sequences .
+    Provided as an example.
+    '''
+    }
+
+    {
+    name: Fish Metabarcode Testdata
+    value: export/local/usfish/
+    type: FASTQ, COLLECTION
+    project_uid:fish
+    help: This collections contains fish metabarcode data.
+
+    }
+
+    {
+    name: Samplesheet for Fish Metabarcode Testdata
+    value: export/local/usfish/sample-sheet.csv
+    type: CSV
+    project_uid:fish
+    help: This file contains information on the metabarcode data.
+    }
+
+
+    {
+    name: Sequencing Run 1
+    value: /export/data/usfish/runs/run1
+    type: FASTQ, COLLECTION
+    project_uid:fish
+    help: Data for sequencing run 1
+    }
+
+    {
+    name: Sample sheet for Sequencing Run 1
+    value: /export/data/usfish/runs/run1-sample-sheet.csv
+    type: CSV
+    project_uid:fish
+    help: '''
+    Specfications for the data in Sequencing Run 1
+    This file is in a format agreed to when developing the recipe. It contains a number of columns
+    that describe the samples names, barcodes, primers and file names.
+    '''
+
+    }
+
+    {
+    name: Sequencing Run 2
+    value: /export/data/usfish/runs/run2
+    type: FASTQ, COLLECTION
+    project_uid:fish
+    help: Data for sequencing run 2
+    }
+
+    {
+    name: Sample sheet for Sequencing Run 2
+    value: /export/data/usfish/runs/run2-sample-sheet.csv
+    type: CSV
+    project_uid:fish
+    help: '''
+    Sample description for Sequencing Run 2
+    This file is in a format agreed to when developing the recipe. It contains a number of columns
+    that describe the samples names, barcodes, primers and file names.
+    '''
+
+    }
+
+    {
+    name: Results: Genome Annotations.gtf
+    value: /export/data/giraffe/results/annotations.gtf
+    type: GTF, ANNOTATIONS
+    project_uid: giraffe
+    help: '''
+    Annotations produced with Augustus and using RNA-Seq data.
+    Contains annotations produced with Augustus using hints generated from the RNA-Seq data.
+    '''
+    }
+
+    {
+    name: Results: Protein Sequences.fa
+    value: /export/data/giraffe/results/proteins.fa
+    type: FASTA, PROTEIN
+    project_uid: giraffe
+    help: '''
+    Predicted protein sequences.
+    Contains the predicted protein sequences based on the annotations generated with Augustus.
+    '''
+    }
+
+    {
+    name: Results: Functional Annotations.txt
+    value: /export/data/giraffe/results/functional-annotations.txt
+    type: TXT
+    project_uid: giraffe
+    help: '''
+    Functional annotations for each gene annotation.
+    Contains the predicted transcript sequences annotated by their closest
+    match to a known sequence.
+    '''
+    }
+
+    {
+    name: Assembly: Short Section.fa
+    value: /export/data/giraffe/assembly/subset.fa
+    type: FASTA
+    project_uid: giraffe
+    help: '''
+    Contains the four largest contigs of the published assembly. Use it to test the pipeline.
+    Contains the scaffolds scaffold320, scaffold268, scaffold1292,scaffold370 from the
+    giraffe scaffold assembled by Rayan Chiki.
+    '''
+
+    }
+
+    {
+    name: Assembly: Published Giraffe Scaffold 2016.fa
+    value: /export/data/giraffe/assembly/soap_assembly_k91_params.gapfilled.fa
+    type: FASTA
+    project_uid: giraffe
+    help: '''
+    The published assembled Giraffe scaffold (2016)
+    The giraffe scaffold assembled by Rayan Chiki
+    '''
+    }
+
+    {
+    name: Sequencing Run: MA1_MP
+    value: /export/data/giraffe/data/GIRAFFE/MA1_MP
+    type: FASTQ
+    project_uid: giraffe
+    help: '''
+    Giraffe, MA1, Mate Pairs, 150bp, 2 x 78 million reads, 8x coverage
+    Specimen ID: `MA1`
+
+    Species: Masai Giraffe
+
+    Sample: Female, Masai Giraffe liver,  Kenya
+
+    Mate Paired Library
+
+    Date created: 2014-Jan-14
+
+    Date submitted: 2016-Mar-14
+
+    SRA ID: `SRR3217431`
+
+    Stats:
+
+    ```
+    adultfemalegiraffeMA1_R1.fastq.gz  FASTQ   DNA   78,494,994  11,774,249,100      150      150      150
+    adultfemalegiraffeMA1_R2.fastq.gz  FASTQ   DNA   78,494,994  11,774,249,100      150      150      150
+    ```
+
+    '''
+    }
+
+    {
+    name: Sequencing Run: MA1_PE
+    value: /export/data/giraffe/data/GIRAFFE/MA1_PE
+    type: FASTQ
+    project_uid: giraffe
+    help: '''
+    Giraffe, MA1,  Paired End, 150bp, 2 x 285 million reads, 28x coverage
+    Specimen ID: `MA1`
+
+    Species: Masai Giraffe
+
+    Sample: Female, Masai Giraffe liver,  Kenya
+
+    DNA-Sequencing, Paired End Library, average coverage 28x
+
+    Date created: 2013-Jul-26
+
+    Date submitted: 2016-Mar-14
+
+    SRA ID: `SRR3218456`
+
+    Stats:
+
+    ```
+    MA1_R1.fastq.gz  FASTQ   DNA   285,111,308  42,766,696,200      150      150      150
+    MA1_R2.fastq.gz  FASTQ   DNA   285,111,308  42,766,696,200      150      150      150
+    ```
+
+    '''
+    }
+
+    {
+    name: Sequencing Run: NZOO_PE
+    value: /export/data/giraffe/data/GIRAFFE/NZOO
+    type: FASTQ
+    project_uid: giraffe
+    help: '''
+    Giraffe, NZOO, Paired End, 151bp, 4 x 22 million reads, 30x coverage
+    Specimen ID: `NZOO`
+
+    Species: Masai Giraffe
+
+    Sample: Female, Masai Giraffe liver, Nashville Zoo
+
+    DNA-Sequencing, Paired End, 151bp length
+
+    Stats:
+
+    ```
+    nzoo_L001_r1.fq.gz  FASTQ   DNA   151,156,603  22,824,647,053      151      151      151
+    nzoo_L001_r2.fq.gz  FASTQ   DNA   151,156,603  22,824,647,053      151      151      151
+    nzoo_L002_r1.fq.gz  FASTQ   DNA   152,207,809  22,983,379,159      151      151      151
+    nzoo_L002_r2.fq.gz  FASTQ   DNA   152,207,809  22,983,379,159      151      151      151
+    ```
+
+    '''
+    }
+
+    {
+    name: Sequencing Run: UGA_PE
+    value: /export/data/giraffe/data/GIRAFFE/UGA
+    type: FASTQ
+    project_uid: giraffe
+    help: '''
+    Giraffe, NZOO, Paired End, 250bp, 2 x 333 million reads, 55x coverage
+    Specimen ID: `UGA`
+
+    Species: Rothschild Giraffe
+
+    Sample: Fibroblast Cell Cultures, San Diego Zoo Institute for Conservation Research
+
+    DNA-Sequencing, Paired End Library, 250bp long, 2 x 26 million reads
+
+    Expected coverage: 22x
+
+    Stats:
+
+    ```
+    UGA_R1.fastq.gz  FASTQ   DNA   333,671,563  83,417,890,750      250      250      250
+    UGA_R2.fastq.gz  FASTQ   DNA   333,671,563  83,417,890,750      250      250      250
+    ```
+
+    '''
+    }
+
+    {
+    name: Sequencing Run: WOAK_PE
+    value: /export/data/giraffe/data/OKAPI/WOAK_PE
+    type: FASTQ
+    project_uid: giraffe
+    help: '''
+    Okapi, WOAK_PE, Paired End, 150bp, 4 x 135 million reads, 27x coverage
+    Specimen ID: `WOAK`
+
+    Species: Okapi
+
+    Sample: Fetal Male Okapi Liver, White Oak Holdings
+
+    DNA-Sequencing, Paired End Library, 150bp read lenghs
+
+    Stats:
+
+    ```
+    lane1_R1.fastq.gz  FASTQ   DNA   133,895,515  20,084,327,250      150      150      150
+    lane1_R2.fastq.gz  FASTQ   DNA   133,895,515  20,084,327,250      150      150      150
+    lane2_R1.fastq.gz  FASTQ   DNA   136,707,167  20,506,075,050      150      150      150
+    lane2_R2.fastq.gz  FASTQ   DNA   136,707,167  20,506,075,050      150      150      150
+    ```
+
+    '''
+    }
+
+    {
+    name: Sequencing Run: WOAK_MP
+    value: /export/data/giraffe/data/OKAPI/WOAK_MP
+    type: FASTQ
+    project_uid: giraffe
+    help: '''
+    Okapi, WOAK_MP, DNA, Mate Pair,  150bp, 2 x 67 million reads, 7x coverage
+    Specimen ID: `WOAK`
+
+    Species: Okapi
+
+    Sample: Fetal Male Okapi Liver, White Oak Holdings
+
+    DNA-Sequencing, Mate Pair, 150bp, 2 x 67 million reads, 7x coverage
+
+    Stats:
+
+    ```
+    fetalokapi1_R1.fastq.gz  FASTQ   DNA   67,300,363  10,095,054,450      150      150      150
+    fetalokapi1_R2.fastq.gz  FASTQ   DNA   67,300,363  10,095,054,450      150      150      150
+    ```
+
+    '''
+    }
+
+    {
+    name: Sequencing Run: NZOO_RNASEQ,
+    value: /export/data/giraffe/data/GIRAFFE/RNASEQ
+    type: FASTQ, RNASEQ
+    project_uid: giraffe
+    help: '''
+    Giraffe, NZOO, RNASEQ, 150bp,  4 x 50 million, for Liver, Heart, Lung and Fibroblast Cell Line
+    Specimen ID: `NZOO` and 'MASG'
+    ```
+    GiraffeCellLine_R1.fastq.gz  FASTQ   DNA   50,073,121  7,510,968,150      150      150      150
+    GiraffeHeart_R1.fastq.gz     FASTQ   DNA   40,082,453  6,012,367,950      150      150      150
+    GiraffeLiver_R1.fastq.gz     FASTQ   DNA   49,715,450  7,457,317,500      150      150      150
+    GiraffeLung_R1.fastq.gz      FASTQ   DNA   54,637,776  8,195,666,400      150      150      150
+    ```
+    '''
+    }
+
+    {
+    name: Sequencing Run: WOAK_RNASEQ
+    value: /export/data/giraffe/data/OKAPI/RNASEQ
+    type: FASTQ, RNASEQ
+    project_uid: giraffe
+    help: '''
+    Okapi, WOAK, OKSD, RNASEQ, 150bp, 2 x 56 million, Liver and Fibroblast Cell Line
+    Specimen ID: `WOAK` and `OKSD`
+
+    ```
+    OkapiCellLine_R1.fastq.gz  FASTQ   DNA   56,933,092  8,539,963,800      150      150      150
+    OkapiLiver_R1.fastq.gz     FASTQ   DNA   57,133,111  8,569,966,650      150      150      150
+    ```
+    '''
+    }
+
+    {
+    name: Transcripts from chr22 human genome.fa
+    value: export/local/rnaseq/refs/22.fa
+    type: FASTA, TRANSCRIPTS
+    project_uid:handbook
+    help: Transcript sequences for chr22 of the human genome.
+    }
+
+    {
+    name: Gene Annotations for chr22 human genome.gtf
+    value: export/local/rnaseq/refs/22.gtf
+    type: GTF
+    project_uid:handbook
+    help: Transcript and gene models for chr22 of the human genome.
+    }
+
+    {
+    name: ERCC92 Spike Control Reference.fa
+    value: export/local/rnaseq/refs/ERCC92.fa
+    type : FASTA, TRANSCRIPTS
+    project_uid:handbook
+    help: Transcript sequences for the ERCC92 Spike Control.
+    }
+
+    {
+    name: ERCC92 Spike Control Annotations.gtf
+    value: export/local/rnaseq/refs/ERCC92.gtf
+    type : GTF
+    project_uid:handbook
+    help: Transcript and gene models for the ERCC92 Spike Control .
+    }
+
+    {
+    name: Metagenomics Data Directory
+    value: /export/data/mothur-study1
+    type: MOTHUR
+    project_uid: mothur
+    help: '''
+    A prepackaged data set with test files.
+    Contains reads in a directory and a file list.
+    '''
+    }
+
+    {
+    name: Fish Sequences by Accession Number
+    value: export/local/usfish/fishacc.fa
+    type: FASTA
+    project_uid:trout
+    help: Fish genomic sequences identified by accession numbers.
+    }
+
+    {
+    name: Fish Sequences by Common Name
+    value: export/local/usfish/fishname.fa
+    type: FASTA
+    project_uid:trout
+    help: Fish genomic sequences identified by common name.
+    }
+
+    {
+    name: Fish Metabarcode Testdata
+    value: export/local/usfish/
+    type: FASTQ, COLLECTION
+    project_uid:trout
+    help: This collections contains fish metabarcode test data.
+
+    }
+
+    {
+    name: Samplesheet for Fish Metabarcode Testdata
+    value: export/local/usfish/sample-sheet.csv
+    type: CSV
+    project_uid:trout
+    help: This file contains information on the metabarcode data.
+    }
+
+    {
+    name: Sequencing Run 1
+    value: /export/data/usfish/runs/run1
+    type: FASTQ, COLLECTION
+    project_uid:trout
+    help: Data for sequencing run 1
+    }
+
+    {
+    name: Sample sheet for Sequencing Run 1
+    value: /export/data/usfish/runs/run1-sample-sheet.csv
+    type: CSV
+    project_uid:trout
+    help: '''
+    Specfications for the data in Sequencing Run 1
+    This file is in a format agreed to when developing the recipe. It contains a number of columns
+    that describe the samples names, barcodes, primers and file names.
+    '''
+
+    }
+
+    {
+    name: Sequencing Run 2
+    value: /export/data/usfish/runs/run2
+    type: FASTQ, COLLECTION
+    project_uid:trout
+    help: Data for sequencing run 2
+    }
+
+    {
+    name: Sample sheet for Sequencing Run 2
+    value: /export/data/usfish/runs/run2-sample-sheet.csv
+    type: CSV
+    project_uid:trout
+    help: '''
+    Sample description for Sequencing Run 2
+    This file is in a format agreed to when developing the recipe. It contains a number of columns
+    that describe the samples names, barcodes, primers and file names.
+    '''
+    }
+
+    {
+    name: Genome.fa
+    value: recipes/tutorial/data/genome.fa
+    type: FASTA
+    project_uid:tutorial
+    help: '''
+    A test genome file.
+    A longer description for the test sequence file goes here.
+    '''
+    }
+
+    {
+    name: SRR numbers.txt
+    value: recipes/tutorial/data/sra.txt
+    type: SRR
+    project_uid:tutorial
+    help: '''
+    SRR sequencing run accession numbers from SRA.
+    Each line represents a SRR run id.
+    '''
+    }
+
+    {
+    name: File Collection
+    value: recipes/tutorial/collection
+    project_uid:tutorial
+    help: '''
+    Multiple files and folders may be represented as a single data entry.
+    This collection contains multiple files and folders. The data view lists the content of the directory.
+    '''
+    }
+
+
+]
+}

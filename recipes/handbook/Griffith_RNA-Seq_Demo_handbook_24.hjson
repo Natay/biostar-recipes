@@ -34,6 +34,7 @@
 
       '''
     id: 24
+    recipe_uid: rnaseq-demo
     uid: rnaseq-demo
     recipe_uid:rnaseq-demo
     project_uid: handbook

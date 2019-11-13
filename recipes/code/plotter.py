@@ -102,7 +102,7 @@ def heatmap(data, colidx=3, labidx=0, fname='heatmap.png'):
 
     plt.xticks(rotation=90)
 
-    plt.savefig(f'{fname}.pdf')
+    plt.savefig(f'{fname}')
 
     if SHOW_PLOT:
         # Pop a window in non-offline mode.
@@ -173,7 +173,7 @@ def main():
     for fname in args.files:
         # Plot each csv file.
         output, ext = os.path.splitext(os.path.basename(fname))
-        output = args.output or os.path.join(os.path.dirname(fname), f'{output}_{args.type}.png')
+        output = args.output or os.path.join(os.path.dirname(fname), f'{output}_{args.type}.pdf')
 
         df = pd.read_csv(filepath_or_buffer=fname, header=0)
 
